@@ -1,0 +1,246 @@
+{
+  "home": {
+    "hero": {
+      "context": "Realtor en Florida · Miami / sur de Florida",
+      "headline": "Tu persona de confianza en Miami",
+      "subheadline": "Para gestionar tu propiedad, evaluar una inversión o dar el próximo paso en Miami, tenés a alguien local que te orienta, responde y cuida el proceso.",
+      "primaryCta": "Hablar con Jacquie",
+      "secondaryCta": "Ver gestión de propiedades",
+      "supportNote": "Acompañamiento personalizado para propietarios e inversores internacionales.",
+      "imageAlt": "Jacquie Zarate, Realtor en Miami"
+    },
+    "jacquieTrust": {
+      "eyebrow": "Conocé a Jacquie",
+      "headline": "Una guía local para tomar decisiones con más confianza",
+      "body": "Jacquie Zarate acompaña a propietarios, compradores e inversores que necesitan una persona de confianza en Miami. Su trabajo combina orientación inmobiliaria, seguimiento personalizado y apoyo real para quienes quieren invertir, comprar o gestionar una propiedad a distancia.",
+      "trustPoints": [
+        "Realtor licenciada en Florida.",
+        "Parte de Miami Life Realty.",
+        "Atención en español e inglés.",
+        "Experiencia acompañando clientes internacionales.",
+        "Enfoque en Miami, Sunny Isles y sur de Florida."
+      ],
+      "cta": "Hablar con Jacquie",
+      "secondaryText": "Si estás evaluando una propiedad o necesitás ayuda para gestionarla, el primer paso es conversar."
+    },
+    "propertyManagement": {
+      "eyebrow": "Gestión de propiedades",
+      "headline": "Tu propiedad en Miami, gestionada con cuidado y seguimiento real",
+      "body": "Si tenés una propiedad para renta corta, puedo ayudarte a publicarla, recibir huéspedes, coordinar detalles y mantenerte informado sin que tengas que estar encima de la gestión diaria.",
+      "keyPoints": [
+        "Publicación en plataformas como Airbnb.",
+        "Selección cuidadosa de huéspedes y atención directa.",
+        "Check-in personalizado y seguimiento durante la estadía.",
+        "Coordinación de arreglos con aprobación del propietario."
+      ],
+      "primaryCta": "Consultar por mi propiedad",
+      "secondaryCta": "Ver cómo funciona",
+      "supportNote": "Ideal para propietarios que quieren generar ingresos con seguimiento claro y tranquilidad."
+    },
+    "process": {
+      "eyebrow": "Cómo funciona",
+      "headline": "Un proceso simple para que no tengas que gestionarlo todo a distancia",
+      "intro": "La idea es que sepas qué pasa desde el primer mensaje: revisamos tu propiedad, definimos cómo conviene manejarla y después tenés seguimiento real durante la gestión.",
+      "steps": [
+        {
+          "title": "Conversamos sobre tu propiedad",
+          "description": "Me contás dónde está, en qué estado se encuentra y qué necesitás resolver como propietario."
+        },
+        {
+          "title": "Definimos la forma de gestionarla",
+          "description": "Evaluamos publicación, tipo de huésped, check-in, reglas y puntos donde necesitás aprobar decisiones."
+        },
+        {
+          "title": "Coordino y te mantengo informado",
+          "description": "Acompaño la operación diaria, la atención al huésped y los arreglos necesarios con seguimiento claro."
+        }
+      ],
+      "cta": "Consultar por mi propiedad"
+    },
+    "midConversion": {
+      "headline": "¿Querés saber si tu propiedad puede gestionarse mejor?",
+      "body": "Escribime y contame qué propiedad tenés, dónde está y qué necesitás resolver. El primer paso puede ser una conversación simple.",
+      "primaryCta": "Consultar por mi propiedad",
+      "note": "Sin compromiso. Primero entendemos tu caso."
+    },
+    "listingsSupport": {
+      "eyebrow": "Oportunidades seleccionadas",
+      "headline": "Algunas propiedades para empezar a mirar el mercado",
+      "body": "Estas propiedades sirven como una primera referencia. Si alguna te interesa, lo más importante es conversar para entender si realmente encaja con tu objetivo.",
+      "items": [
+        {
+          "title": "Propiedad seleccionada en revisión",
+          "area": "Miami / sur de Florida",
+          "note": "Datos e imágenes pendientes de validación antes de publicación."
+        },
+        {
+          "title": "Oportunidad real del inventario",
+          "area": "Área a confirmar",
+          "note": "Se mostrará con información verificada antes de salir a producción."
+        }
+      ],
+      "primaryCta": "Preguntar por una propiedad",
+      "note": "La selección completa puede cambiar según disponibilidad y contexto del mercado."
+    },
+    "finalCta": {
+      "eyebrow": "Próximo paso",
+      "headline": "Empezá con una conversación simple",
+      "body": "Si tenés una propiedad, estás evaluando invertir o simplemente querés entender por dónde empezar en Miami, escribime y vemos cuál es el mejor próximo paso.",
+      "primaryCta": "Hablar con Jacquie",
+      "secondaryCta": "Ir a contacto",
+      "note": "Atención personalizada en español e inglés."
+    }
+  },
+  "propertyManagement": {
+    "hero": {
+      "eyebrow": "Gestión de propiedades",
+      "headline": "Gestión de renta corta en Miami con seguimiento real",
+      "body": "Si tenés una propiedad en Miami o el sur de la Florida, puedo ayudarte a gestionarla para renta corta con una presencia local, atención al detalle y comunicación clara durante el proceso.",
+      "primaryCta": "Consultar por mi propiedad",
+      "secondaryCta": "Contacto"
+    },
+    "audience": {
+      "eyebrow": "Para quién es",
+      "headline": "Pensado para propietarios que no quieren estar encima de cada detalle",
+      "body": "Este servicio es para propietarios e inversores que quieren que su propiedad pueda generar ingresos por renta corta, pero necesitan a alguien local que acompañe la operación diaria, reciba huéspedes, coordine detalles y mantenga informado al dueño.",
+      "points": [
+        "Tenés una propiedad en Miami o el sur de la Florida.",
+        "Querés explorar una gestión orientada a renta corta.",
+        "Necesitás seguimiento local y comunicación clara.",
+        "Querés participar en las decisiones importantes."
+      ]
+    },
+    "scope": {
+      "eyebrow": "Alcance del servicio",
+      "headline": "Puedo ayudarte con la gestión diaria, manteniendo claridad en cada paso",
+      "intro": "El foco está en coordinar lo necesario para que la propiedad funcione con cuidado, huéspedes adecuados y aprobación del propietario cuando corresponde.",
+      "items": [
+        "Publicación en plataformas como Airbnb.",
+        "Uso de cartera propia de contactos cuando aplique.",
+        "Selección cuidadosa de huéspedes.",
+        "Atención directa al huésped y check-in personalizado.",
+        "Cobro y transferencia al propietario.",
+        "Coordinación de arreglos y mantenimiento con aprobación del dueño."
+      ]
+    },
+    "process": {
+      "eyebrow": "Cómo funciona",
+      "headline": "Un proceso simple para entender tu propiedad y definir el próximo paso",
+      "steps": [
+        "Revisamos tu propiedad, ubicación y situación actual.",
+        "Definimos qué necesita la propiedad para operar como renta corta.",
+        "Coordinamos publicación, huéspedes, check-in y seguimiento diario.",
+        "Te mantengo informado y consulto aprobaciones cuando hay decisiones importantes."
+      ]
+    },
+    "transparency": {
+      "eyebrow": "Transparencia",
+      "headline": "La gestión puede darte tranquilidad sin dejarte afuera de las decisiones",
+      "body": "La idea es que no tengas que ocuparte de cada detalle operativo, pero que sigas teniendo claridad sobre lo que pasa. Las reparaciones, cambios relevantes y decisiones importantes se coordinan con aprobación del propietario.",
+      "points": [
+        "No se hacen promesas de ocupación ni rentabilidad garantizada.",
+        "Los arreglos se coordinan con aprobación del propietario.",
+        "La comunicación se mantiene clara para que sepas qué está pasando.",
+        "El objetivo es tranquilidad, cuidado y seguimiento real."
+      ]
+    },
+    "finalCta": {
+      "headline": "Si querés evaluar tu propiedad, el primer paso es conversar",
+      "body": "Contame dónde está tu propiedad y qué necesitás resolver. A partir de eso podemos ver si este tipo de gestión tiene sentido para vos.",
+      "primaryCta": "Consultar por mi propiedad",
+      "secondaryCta": "Contacto"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Sobre Jacquie",
+      "headline": "Conocé a Jacquie",
+      "body": "Soy Jacquie Zarate, argentina y parte de Miami Life Realty. Acompaño a propietarios, compradores e inversores internacionales que necesitan claridad, seguimiento y una persona local que responda durante el proceso.",
+      "primaryCta": "Hablar con Jacquie",
+      "secondaryCta": "Ver gestión de propiedades"
+    },
+    "accompany": {
+      "eyebrow": "Cómo te acompaño",
+      "headline": "Con claridad, seguimiento y una mirada cercana",
+      "body": "Mi trabajo no es mostrar propiedades sin contexto. Primero entiendo qué necesitás, en qué etapa estás y qué decisión querés tomar. A partir de ahí, te acompaño con información clara, seguimiento personalizado y una presencia local en Miami.",
+      "points": [
+        "Te ayudo a entender el proceso antes de avanzar.",
+        "Te acompaño si estás comprando, invirtiendo o gestionando una propiedad.",
+        "Mantengo comunicación clara para que no tengas que decidir a ciegas."
+      ]
+    },
+    "audience": {
+      "eyebrow": "Para quién trabajo",
+      "headline": "Para personas que necesitan alguien local antes de tomar decisiones a distancia",
+      "body": "Trabajo con propietarios, compradores e inversores que miran Miami desde afuera y necesitan una guía confiable. Muchos buscan comprar, invertir o gestionar una propiedad sin estar presentes todos los días.",
+      "items": [
+        "Propietarios que necesitan apoyo con renta corta.",
+        "Compradores que quieren entender el mercado antes de avanzar.",
+        "Inversores internacionales que necesitan acompañamiento local.",
+        "Personas que prefieren una conversación clara antes que un portal lleno de opciones."
+      ]
+    },
+    "trust": {
+      "eyebrow": "Señales de confianza",
+      "headline": "Una base local para acompañarte mejor",
+      "points": [
+        "Parte de Miami Life Realty.",
+        "Comunicación en español e inglés.",
+        "Web disponible en español, inglés y francés de Canadá.",
+        "Foco en Miami, Sunny Isles y el sur de Florida.",
+        "Experiencia acompañando clientes internacionales.",
+        "Trato personalizado y seguimiento de inicio a fin."
+      ]
+    },
+    "approach": {
+      "eyebrow": "Mi enfoque",
+      "headline": "Primero entender, después orientar",
+      "body": "Cada persona llega con una situación distinta. Algunas quieren comprar, otras invertir, otras necesitan que su propiedad funcione mejor como renta corta. Mi enfoque es ordenar la información, explicar opciones reales y acompañarte para que puedas decidir con más confianza.",
+      "note": "La prioridad no es empujarte a ver inventario. La prioridad es entender qué necesitás y cuál es el próximo paso correcto."
+    },
+    "finalCta": {
+      "headline": "Si necesitás una guía local en Miami, empecemos por conversar",
+      "body": "Contame qué estás evaluando y qué necesitás resolver. A partir de ahí vemos cómo puedo ayudarte.",
+      "primaryCta": "Hablar con Jacquie",
+      "secondaryCta": "Contacto"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contacto",
+      "headline": "Empezá con una conversación simple",
+      "body": "Si tenés una propiedad, estás evaluando comprar o invertir, o simplemente necesitás entender por dónde empezar en Miami, escribime y vemos cuál es el mejor próximo paso.",
+      "primaryCta": "Hablar con Jacquie por WhatsApp"
+    },
+    "whenToWrite": {
+      "eyebrow": "Cuándo escribirme",
+      "headline": "Podés escribirme si necesitás claridad antes de avanzar",
+      "items": [
+        "Tenés una propiedad en Miami o el sur de Florida.",
+        "Querés gestionar una propiedad para renta corta.",
+        "Estás evaluando comprar o invertir.",
+        "No sabés por dónde empezar y necesitás orientación local."
+      ]
+    },
+    "messageGuide": {
+      "eyebrow": "Qué incluir",
+      "headline": "Un primer mensaje puede ser simple",
+      "body": "Para entender mejor tu caso, podés contarme dónde está la propiedad o qué zona te interesa, qué necesitás resolver y si sos propietario, comprador o inversor.",
+      "prompts": [
+        "Ubicación de la propiedad o zona de interés.",
+        "Qué necesitás resolver.",
+        "Si sos propietario, comprador o inversor."
+      ]
+    },
+    "channels": {
+      "eyebrow": "Canales",
+      "headline": "Atención personalizada en español e inglés",
+      "body": "La experiencia web está disponible en español, inglés y francés de Canadá. La comunicación humana directa está confirmada en español e inglés."
+    },
+    "finalCta": {
+      "headline": "Si querés avanzar, escribime por WhatsApp",
+      "body": "No necesitás tener todo definido. El primer paso puede ser contarme qué estás evaluando.",
+      "primaryCta": "Hablar con Jacquie"
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "home": {
+    "hero": {
+      "context": "Florida Realtor · Miami / South Florida",
+      "headline": "Your trusted person in Miami",
+      "subheadline": "Whether you need help managing your property, evaluating an investment, or taking the next step in Miami, you have someone local to guide the process and follow through.",
+      "primaryCta": "Talk to Jacquie",
+      "secondaryCta": "View Property Management",
+      "supportNote": "Personalized guidance for international owners and investors.",
+      "imageAlt": "Jacquie Zarate, Miami Realtor"
+    },
+    "jacquieTrust": {
+      "eyebrow": "Meet Jacquie",
+      "headline": "Local guidance for more confident decisions",
+      "body": "Jacquie Zarate supports owners, buyers, and investors who need a trusted person in Miami. Her work combines real estate guidance, personal follow-up, and practical support for people who want to invest, buy, or manage a property from a distance.",
+      "trustPoints": [
+        "Licensed Realtor in Florida.",
+        "Part of Miami Life Realty.",
+        "Spanish and English communication.",
+        "Experience supporting international clients.",
+        "Focused on Miami, Sunny Isles, and South Florida."
+      ],
+      "cta": "Talk to Jacquie",
+      "secondaryText": "If you are evaluating a property or need help managing one, the first step is a conversation."
+    },
+    "propertyManagement": {
+      "eyebrow": "Property Management",
+      "headline": "Your Miami property, managed with care and real follow-up",
+      "body": "If you have a property for short-term rental, I can help publish it, receive guests, coordinate details, and keep you informed without requiring you to manage the daily operation.",
+      "keyPoints": [
+        "Publishing on platforms such as Airbnb.",
+        "Careful guest selection and direct guest attention.",
+        "Personalized check-in and follow-up during the stay.",
+        "Repair coordination with owner approval."
+      ],
+      "primaryCta": "Ask about my property",
+      "secondaryCta": "See how it works",
+      "supportNote": "Designed for owners who want to generate rental income with clear follow-up and peace of mind."
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "headline": "A simple process so you do not have to manage everything from a distance",
+      "intro": "The goal is for you to know what happens after the first message: we review your property, define the right management approach, and keep real follow-up during the process.",
+      "steps": [
+        {
+          "title": "We talk about your property",
+          "description": "You share where it is, its current condition, and what you need to solve as an owner."
+        },
+        {
+          "title": "We define how to manage it",
+          "description": "We review publishing, guest fit, check-in, rules, and the points where owner approval is needed."
+        },
+        {
+          "title": "I coordinate and keep you informed",
+          "description": "I support the daily operation, guest attention, and needed repairs with clear follow-up."
+        }
+      ],
+      "cta": "Ask about my property"
+    },
+    "midConversion": {
+      "headline": "Want to know if your property can be managed better?",
+      "body": "Write to me and tell me what property you have, where it is, and what you need to solve. The first step can be a simple conversation.",
+      "primaryCta": "Ask about my property",
+      "note": "No pressure. First, we understand your situation."
+    },
+    "listingsSupport": {
+      "eyebrow": "Selected opportunities",
+      "headline": "Selected properties to understand the market",
+      "body": "These listings are a first reference point. If a property interests you, the most important step is to talk and understand whether it truly fits your goal.",
+      "items": [
+        {
+          "title": "Selected property under review",
+          "area": "Miami / South Florida",
+          "note": "Details and images will be validated before publication."
+        },
+        {
+          "title": "Real inventory opportunity",
+          "area": "Area to confirm",
+          "note": "It will be shown with verified information before production."
+        }
+      ],
+      "primaryCta": "Ask about a property",
+      "note": "The selection may change based on availability and market context."
+    },
+    "finalCta": {
+      "eyebrow": "Next step",
+      "headline": "Start with a simple conversation",
+      "body": "If you have a property, are considering investing, or simply want to understand where to begin in Miami, write to me and we can look at the best next step.",
+      "primaryCta": "Talk to Jacquie",
+      "secondaryCta": "Go to contact",
+      "note": "Personalized communication in Spanish and English."
+    }
+  },
+  "propertyManagement": {
+    "hero": {
+      "eyebrow": "Property Management",
+      "headline": "Short-term rental management in Miami with real follow-up",
+      "body": "If you have a property in Miami or South Florida, I can help manage it for short-term rental with local presence, attention to detail, and clear communication throughout the process.",
+      "primaryCta": "Ask about my property",
+      "secondaryCta": "Contact"
+    },
+    "audience": {
+      "eyebrow": "Who it is for",
+      "headline": "Designed for owners who do not want to manage every detail themselves",
+      "body": "This service is for owners and investors who want their property to have short-term rental potential, but need someone local to support the daily operation, receive guests, coordinate details, and keep the owner informed.",
+      "points": [
+        "You have a property in Miami or South Florida.",
+        "You want to explore short-term rental or Airbnb-style management.",
+        "You need local follow-up and clear communication.",
+        "You want to stay involved in important decisions."
+      ]
+    },
+    "scope": {
+      "eyebrow": "Service scope",
+      "headline": "I can help with the day-to-day management while keeping you informed at each step",
+      "intro": "The focus is coordinating what the property needs to operate with care, suitable guests, and owner approval when required.",
+      "items": [
+        "Publishing on platforms such as Airbnb.",
+        "Using my own contact network when relevant.",
+        "Careful guest selection.",
+        "Direct guest attention and personalized check-in.",
+        "Payment collection and transfer to the owner.",
+        "Repair and maintenance coordination with owner approval."
+      ]
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "headline": "A simple process to understand your property and define the next step",
+      "steps": [
+        "We review your property, location, and current situation.",
+        "We define what the property needs to operate as a short-term rental.",
+        "I coordinate publishing, guests, check-in, and daily follow-up.",
+        "I keep you informed and ask for approvals when important decisions come up."
+      ]
+    },
+    "transparency": {
+      "eyebrow": "Transparency",
+      "headline": "Management should give you clarity, not distance from your property",
+      "body": "The idea is that you do not have to handle every operational detail, while still having clarity about what is happening. Repairs, relevant changes, and important decisions are coordinated with owner approval.",
+      "points": [
+        "No occupancy or profitability guarantees are promised.",
+        "Repairs are coordinated with owner approval.",
+        "Communication stays clear so you know what is happening.",
+        "The goal is peace of mind, care, and real follow-up."
+      ]
+    },
+    "finalCta": {
+      "headline": "If you want to evaluate your property, the first step is a conversation",
+      "body": "Tell me where your property is and what you need to solve. From there, we can see whether this type of management makes sense for you.",
+      "primaryCta": "Ask about my property",
+      "secondaryCta": "Contact"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About Jacquie",
+      "headline": "Meet Jacquie",
+      "body": "I'm Jacquie Zarate, originally from Argentina and part of Miami Life Realty. I support international owners, buyers, and investors who need clarity, follow-up, and a local person who responds throughout the process.",
+      "primaryCta": "Talk to Jacquie",
+      "secondaryCta": "View Property Management"
+    },
+    "accompany": {
+      "eyebrow": "How I accompany you",
+      "headline": "With clarity, follow-up, and a close perspective",
+      "body": "My work is not about showing properties without context. First, I understand what you need, where you are in the process, and what decision you want to make. From there, I support you with clear information, personal follow-up, and local presence in Miami.",
+      "points": [
+        "I help you understand the process before moving forward.",
+        "I support you if you are buying, investing, or managing a property.",
+        "I keep communication clear so you do not have to make decisions blindly."
+      ]
+    },
+    "audience": {
+      "eyebrow": "Who I work with",
+      "headline": "For people who need someone local before making decisions from a distance",
+      "body": "I work with owners, buyers, and investors who are looking at Miami from abroad and need reliable guidance. Many want to buy, invest, or manage a property without being present every day.",
+      "items": [
+        "Owners who need support with short-term rental management.",
+        "Buyers who want to understand the market before moving forward.",
+        "International investors who need local guidance.",
+        "People who prefer a clear conversation before a portal full of options."
+      ]
+    },
+    "trust": {
+      "eyebrow": "Trust signals",
+      "headline": "A local foundation to support you better",
+      "points": [
+        "Part of Miami Life Realty.",
+        "Communication in Spanish and English.",
+        "Website available in Spanish, English, and French (Canada).",
+        "Focused on Miami, Sunny Isles, and South Florida.",
+        "Experience supporting international clients.",
+        "Personalized attention and follow-up from start to finish."
+      ]
+    },
+    "approach": {
+      "eyebrow": "My approach",
+      "headline": "Understand first, then guide",
+      "body": "Every person arrives with a different situation. Some want to buy, others want to invest, and others need their property to work better as a short-term rental. My approach is to organize the information, explain real options, and support you so you can decide with more confidence.",
+      "note": "The priority is not to push you into inventory. The priority is to understand what you need and what the right next step is."
+    },
+    "finalCta": {
+      "headline": "If you need local guidance in Miami, start with a conversation",
+      "body": "Tell me what you are evaluating and what you need to solve. From there, we can see how I can help.",
+      "primaryCta": "Talk to Jacquie",
+      "secondaryCta": "Contact"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "headline": "Start with a simple conversation",
+      "body": "If you have a property, are considering buying or investing, or simply need to understand where to begin in Miami, write to me and we can look at the best next step.",
+      "primaryCta": "Talk to Jacquie on WhatsApp"
+    },
+    "whenToWrite": {
+      "eyebrow": "When to write",
+      "headline": "You can write to me when you need clarity before moving forward",
+      "items": [
+        "You have a property in Miami or South Florida.",
+        "You want to manage a property for short-term rental.",
+        "You are considering buying or investing.",
+        "You do not know where to start and need local guidance."
+      ]
+    },
+    "messageGuide": {
+      "eyebrow": "What to include",
+      "headline": "A first message can be simple",
+      "body": "To understand your situation better, you can tell me where the property is or which area interests you, what you need to solve, and whether you are an owner, buyer, or investor.",
+      "prompts": [
+        "Property location or area of interest.",
+        "What you need to solve.",
+        "Whether you are an owner, buyer, or investor."
+      ]
+    },
+    "channels": {
+      "eyebrow": "Channels",
+      "headline": "Personalized communication in Spanish and English",
+      "body": "The website experience is available in Spanish, English, and French (Canada). Direct human communication is confirmed in Spanish and English."
+    },
+    "finalCta": {
+      "headline": "If you want to move forward, write to me on WhatsApp",
+      "body": "You do not need to have everything defined. The first step can be telling me what you are evaluating.",
+      "primaryCta": "Talk to Jacquie"
+    }
+  }
+}
