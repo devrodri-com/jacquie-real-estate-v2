@@ -98,6 +98,12 @@ const openGraphLocaleByLocale: Record<RouteLocale, string> = {
   "fr-ca": "fr_CA",
 };
 
+const openGraphImageByLocale: Record<RouteLocale, string> = {
+  es: "/og/jacquie-og-es.jpg",
+  en: "/og/jacquie-og-en.jpg",
+  "fr-ca": "/og/jacquie-og-fr-ca.jpg",
+};
+
 export function getHtmlLang(locale: RouteLocale): string {
   return htmlLangByLocale[locale];
 }
@@ -130,9 +136,9 @@ export function buildPageMetadata(
   const path = getPath(locale, page);
   const image = {
     alt: "Jacquie Zarate",
-    height: 1024,
-    url: "/images/jacquie-zarate-hero.jpg",
-    width: 1024,
+    height: 630,
+    url: openGraphImageByLocale[locale],
+    width: 1200,
   };
 
   return {
