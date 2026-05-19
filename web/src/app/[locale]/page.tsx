@@ -8,12 +8,24 @@ import { MidConversionCta } from "@/components/mid-conversion-cta";
 import { PropertyManagementSection } from "@/components/property-management-section";
 import { ProcessSection } from "@/components/process-section";
 import { routing, type RouteLocale } from "@/i18n/routing";
+import { buildPageMetadata, getRouteLocale } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+type LocalePageProps = Readonly<{
+  params: Promise<{ locale: string }>;
+}>;
+
+export async function generateMetadata({
+  params,
+}: LocalePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return buildPageMetadata(getRouteLocale(locale), "home");
+}
 
 export default async function HomePage({
   params,
-}: Readonly<{
-  params: Promise<{ locale: string }>;
-}>) {
+}: LocalePageProps) {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {

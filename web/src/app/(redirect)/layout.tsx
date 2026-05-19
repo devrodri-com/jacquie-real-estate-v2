@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -14,20 +13,14 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Jacquie Zarate Real Estate",
-  description:
-    "Trust-led Miami real estate guidance and property management with Jacquie Zarate.",
-};
-
-export default function RootLayout({
+export default function RedirectRootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${inter.variable} ${newsreader.variable} h-full`}
       suppressHydrationWarning
     >

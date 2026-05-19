@@ -1,14 +1,26 @@
 import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { PropertyManagementPage } from "@/components/property-management-page";
 import { routing, type RouteLocale } from "@/i18n/routing";
+import { buildPageMetadata, getRouteLocale } from "@/lib/metadata";
+
+type LocalePageProps = Readonly<{
+  params: Promise<{ locale: string }>;
+}>;
+
+export async function generateMetadata({
+  params,
+}: LocalePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return buildPageMetadata(getRouteLocale(locale), "propertyManagement");
+}
 
 export default async function PropertyManagementRoute({
   params,
-}: Readonly<{
-  params: Promise<{ locale: string }>;
-}>) {
+}: LocalePageProps) {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
