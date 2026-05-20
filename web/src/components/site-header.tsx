@@ -53,6 +53,21 @@ const mobileNavLabels: typeof navLabels = {
   "fr-ca": navLabels["fr-ca"],
 };
 
+const mobileMenuLabels: Record<RouteLocale, { close: string; open: string }> = {
+  es: {
+    close: "Cerrar menú de navegación",
+    open: "Abrir menú de navegación",
+  },
+  en: {
+    close: "Close navigation menu",
+    open: "Open navigation menu",
+  },
+  "fr-ca": {
+    close: "Fermer le menu de navigation",
+    open: "Ouvrir le menu de navigation",
+  },
+};
+
 function isRouteLocale(value: string): value is RouteLocale {
   return routeLocales.includes(value as RouteLocale);
 }
@@ -83,6 +98,7 @@ export function SiteHeader() {
   const locale = getCurrentLocale(pathname);
   const labels = navLabels[locale];
   const mobileLabels = mobileNavLabels[locale];
+  const mobileMenuLabel = mobileMenuLabels[locale];
 
   const desktopNavItems = [
     {
@@ -193,7 +209,7 @@ export function SiteHeader() {
           <button
             aria-controls="mobile-navigation"
             aria-expanded={isMenuOpen}
-            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={isMenuOpen ? mobileMenuLabel.close : mobileMenuLabel.open}
             className="inline-flex h-9 w-10 flex-col items-center justify-center gap-1 border border-primary/12 text-primary transition-colors hover:border-primary/35 hover:bg-white/55 lg:hidden"
             onClick={() => setIsMenuOpen((current) => !current)}
             type="button"

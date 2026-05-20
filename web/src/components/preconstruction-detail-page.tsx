@@ -35,7 +35,9 @@ type PreconstructionDetailContent = {
     amenities: string;
     highlights: string;
     location: string;
+    locationHeadline: string;
     paymentPlan: string;
+    paymentPlanHeadline: string;
     residences: string;
     unitMix: string;
   };
@@ -315,7 +317,7 @@ export function PreconstructionDetailPage({
               {content.sections.paymentPlan}
             </p>
             <h2 className="mt-4 break-words font-display text-3xl leading-tight text-primary sm:text-5xl">
-              {content.sections.paymentPlan}
+              {content.sections.paymentPlanHeadline}
             </h2>
           </div>
 
@@ -343,7 +345,7 @@ export function PreconstructionDetailPage({
             {content.sections.location}
           </p>
           <h2 className="mt-4 break-words font-display text-3xl leading-tight text-primary sm:text-5xl">
-            {content.sections.location}
+            {content.sections.locationHeadline}
           </h2>
           <p className="mt-5 text-base leading-8 text-foreground/70">
             {content.locationBody}

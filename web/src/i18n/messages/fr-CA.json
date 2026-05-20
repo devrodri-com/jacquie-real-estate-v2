@@ -262,7 +262,9 @@
         "unitMix": "Types d’unités",
         "amenities": "Commodités et mode de vie",
         "paymentPlan": "Plan de paiement",
-        "location": "Emplacement"
+        "paymentPlanHeadline": "Une structure à confirmer avec les informations officielles",
+        "location": "Emplacement",
+        "locationHeadline": "Une référence claire pour comprendre le secteur"
       },
       "paymentPlanNote": "Le plan de paiement doit être confirmé avec des informations officielles à jour.",
       "locationBody": "Référence d’emplacement du projet. Avant d’avancer, il faut revoir le contexte du secteur, l’accès et les détails officiels à jour.",

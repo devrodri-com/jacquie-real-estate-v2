@@ -422,7 +422,7 @@ const curatedPreconstructionProjects: PreconstructionProject[] = [
     },
     paymentPlan: {
       es: [
-        "Reserva: $50k para 1BR, $75k para 2BR, $100k para 3BR",
+        "Reserva inicial por tipología: $50k para 1BR, $75k para 2BR, $100k para 3BR (a confirmar)",
         "Balance hasta 20% al contrato",
         "10% al inicio de obra",
         "10% seis meses después del inicio",
@@ -430,7 +430,7 @@ const curatedPreconstructionProjects: PreconstructionProject[] = [
         "50% al cierre",
       ],
       en: [
-        "Reservation: $50k for 1BR, $75k for 2BR, $100k for 3BR",
+        "Initial reservation by layout: $50k for 1BR, $75k for 2BR, $100k for 3BR (to confirm)",
         "Balance to 20% at contract",
         "10% at groundbreaking",
         "10% six months after groundbreaking",
@@ -438,7 +438,7 @@ const curatedPreconstructionProjects: PreconstructionProject[] = [
         "50% at closing",
       ],
       "fr-ca": [
-        "Réservation : 50 k$ pour 1 ch., 75 k$ pour 2 ch., 100 k$ pour 3 ch.",
+        "Réservation initiale selon la configuration : 50 k$ pour 1 ch., 75 k$ pour 2 ch., 100 k$ pour 3 ch. (à confirmer)",
         "Solde jusqu’à 20 % au contrat",
         "10 % au début des travaux",
         "10 % six mois après le début des travaux",

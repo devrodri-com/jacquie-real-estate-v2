@@ -261,7 +261,9 @@
         "unitMix": "Unit mix",
         "amenities": "Amenities and lifestyle",
         "paymentPlan": "Payment plan",
-        "location": "Location"
+        "paymentPlanHeadline": "A structure to confirm with official information",
+        "location": "Location",
+        "locationHeadline": "A clear reference for understanding the area"
       },
       "paymentPlanNote": "The payment plan must be confirmed with updated official information.",
       "locationBody": "Project location reference. Before moving forward, it is worth reviewing area context, access, and updated official details.",

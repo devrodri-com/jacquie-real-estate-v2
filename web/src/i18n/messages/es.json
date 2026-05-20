@@ -261,7 +261,9 @@
         "unitMix": "Tipologías",
         "amenities": "Amenidades y estilo de vida",
         "paymentPlan": "Plan de pago",
-        "location": "Ubicación"
+        "paymentPlanHeadline": "Estructura a confirmar con información oficial",
+        "location": "Ubicación",
+        "locationHeadline": "Una referencia clara para entender la zona"
       },
       "paymentPlanNote": "El plan de pago debe confirmarse con información oficial actualizada.",
       "locationBody": "Referencia de ubicación del proyecto. Antes de avanzar, conviene revisar contexto de zona, acceso y datos oficiales actualizados.",
