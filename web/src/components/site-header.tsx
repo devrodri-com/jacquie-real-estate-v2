@@ -18,22 +18,30 @@ const navLabels: Record<
   RouteLocale,
   {
     propertyManagement: string;
+    listings: string;
+    preConstruction: string;
     about: string;
     contact: string;
   }
 > = {
   es: {
     propertyManagement: "Gestión de propiedades",
+    listings: "Listings",
+    preConstruction: "Preconstrucción",
     about: "Sobre Jacquie",
     contact: "Contacto",
   },
   en: {
     propertyManagement: "Property Management",
+    listings: "Listings",
+    preConstruction: "Pre-construction",
     about: "About",
     contact: "Contact",
   },
   "fr-ca": {
     propertyManagement: "Gestion de propriétés",
+    listings: "Propriétés",
+    preConstruction: "Préconstruction",
     about: "À propos",
     contact: "Contact",
   },
@@ -78,6 +86,14 @@ export function SiteHeader() {
       label: labels.propertyManagement,
     },
     {
+      href: `/${locale}/listings`,
+      label: labels.listings,
+    },
+    {
+      href: `/${locale}/pre-construction`,
+      label: labels.preConstruction,
+    },
+    {
       href: `/${locale}/about`,
       label: labels.about,
     },
@@ -91,6 +107,14 @@ export function SiteHeader() {
     {
       href: `/${locale}/property-management`,
       label: mobileLabels.propertyManagement,
+    },
+    {
+      href: `/${locale}/listings`,
+      label: mobileLabels.listings,
+    },
+    {
+      href: `/${locale}/pre-construction`,
+      label: mobileLabels.preConstruction,
     },
     {
       href: `/${locale}/about`,
@@ -116,7 +140,7 @@ export function SiteHeader() {
 
           <nav
             aria-label="Primary navigation"
-            className="hidden items-center gap-7 md:flex"
+            className="hidden items-center gap-5 lg:flex xl:gap-7"
           >
             {desktopNavItems.map((item) => (
               <Link
@@ -161,7 +185,7 @@ export function SiteHeader() {
             aria-controls="mobile-navigation"
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-            className="inline-flex h-9 w-10 flex-col items-center justify-center gap-1 border border-primary/12 text-primary transition-colors hover:border-primary/35 hover:bg-white/55 md:hidden"
+            className="inline-flex h-9 w-10 flex-col items-center justify-center gap-1 border border-primary/12 text-primary transition-colors hover:border-primary/35 hover:bg-white/55 lg:hidden"
             onClick={() => setIsMenuOpen((current) => !current)}
             type="button"
           >
@@ -193,7 +217,7 @@ export function SiteHeader() {
       <div
         className={
           isMenuOpen
-            ? "border-t border-primary/10 md:hidden"
+            ? "border-t border-primary/10 lg:hidden"
             : "hidden"
         }
         id="mobile-navigation"
