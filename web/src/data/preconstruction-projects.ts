@@ -7,7 +7,7 @@ export type PreconstructionProject = {
   priceFromUsd?: number;
   delivery?: string;
   heroImage: string;
-  source: "esteban-inventory";
+  source: "internal-curation";
   status: "needs_verification";
 };
 
@@ -21,7 +21,7 @@ export const preconstructionProjects: PreconstructionProject[] = [
     priceFromUsd: 830000,
     delivery: "2026",
     heroImage: "https://ik.imagekit.io/devrodri/2200%20Brickell/BTag7Isw.jpeg",
-    source: "esteban-inventory",
+    source: "internal-curation",
     status: "needs_verification",
   },
   {
@@ -34,7 +34,7 @@ export const preconstructionProjects: PreconstructionProject[] = [
     delivery: "2028",
     heroImage:
       "https://ik.imagekit.io/devrodri/Baccarat/Related-OneBrickell-03-Extrior_Grua-01.jpg",
-    source: "esteban-inventory",
+    source: "internal-curation",
     status: "needs_verification",
   },
   {
@@ -46,7 +46,7 @@ export const preconstructionProjects: PreconstructionProject[] = [
     priceFromUsd: 1500000,
     delivery: "2026",
     heroImage: "https://ik.imagekit.io/devrodri/CIpriani/1-2.jpg",
-    source: "esteban-inventory",
+    source: "internal-curation",
     status: "needs_verification",
   },
   {
@@ -59,7 +59,7 @@ export const preconstructionProjects: PreconstructionProject[] = [
     delivery: "2028",
     heroImage:
       "https://ik.imagekit.io/devrodri/Elle%20Residences/Elle%20Residences%20Miami%2008.jpg",
-    source: "esteban-inventory",
+    source: "internal-curation",
     status: "needs_verification",
   },
   {
@@ -71,7 +71,7 @@ export const preconstructionProjects: PreconstructionProject[] = [
     priceFromUsd: 700000,
     delivery: "2028",
     heroImage: "https://ik.imagekit.io/devrodri/Midtown%20Park/ca7LMYAw.jpeg",
-    source: "esteban-inventory",
+    source: "internal-curation",
     status: "needs_verification",
   },
 ];

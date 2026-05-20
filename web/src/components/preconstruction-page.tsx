@@ -41,11 +41,21 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
 });
 
+const visiblePreconstructionProjectIds = new Set([
+  "2200-brickell",
+  "elle-residences",
+  "midtown-park",
+]);
+
 export function PreconstructionPage({
   content,
   locale,
   projects,
 }: Readonly<PreconstructionPageProps>) {
+  const visibleProjects = projects.filter((project) =>
+    visiblePreconstructionProjectIds.has(project.id),
+  );
+
   return (
     <div className="pb-14 pt-12 sm:pb-24 sm:pt-20 lg:pt-24">
       <section className="max-w-3xl">
@@ -61,9 +71,9 @@ export function PreconstructionPage({
       </section>
 
       <section className="mt-14 grid gap-5 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
+        {visibleProjects.map((project) => (
           <article
-            className="group flex min-h-full flex-col overflow-hidden border border-primary/10 bg-white shadow-[0_18px_60px_rgba(59,39,74,0.07)]"
+            className="group flex min-h-full flex-col overflow-hidden border border-primary/8 bg-white/62"
             key={project.id}
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-accent/10">
@@ -86,36 +96,35 @@ export function PreconstructionPage({
                 </h2>
               </div>
 
-              <dl className="mt-5 grid gap-3 text-sm text-foreground/68">
-                {project.priceFromUsd ? (
-                  <div className="flex items-center justify-between gap-4 border-t border-primary/8 pt-3">
-                    <dt>{content.labels.priceFrom}</dt>
-                    <dd className="font-semibold text-foreground">
-                      {currencyFormatter.format(project.priceFromUsd)}
-                    </dd>
-                  </div>
-                ) : null}
-                {project.delivery ? (
-                  <div className="flex items-center justify-between gap-4 border-t border-primary/8 pt-3">
-                    <dt>{content.labels.delivery}</dt>
-                    <dd className="font-semibold text-foreground">
-                      {project.delivery}
-                    </dd>
-                  </div>
-                ) : null}
-              </dl>
-
               <div className="mt-5">
                 <span className="inline-flex border border-primary/12 px-3 py-1.5 text-xs font-semibold text-primary/70">
                   {content.labels.statusBadge}
                 </span>
               </div>
 
+              <dl className="mt-5 grid gap-2.5 text-sm text-foreground/58">
+                {project.priceFromUsd ? (
+                  <div className="flex items-center gap-2">
+                    <dt>{content.labels.priceFrom}</dt>
+                    <dd className="font-medium text-foreground/78">
+                      {currencyFormatter.format(project.priceFromUsd)}
+                    </dd>
+                  </div>
+                ) : null}
+                {project.delivery ? (
+                  <div className="flex items-center gap-2">
+                    <dt>{content.labels.delivery}</dt>
+                    <dd className="font-medium text-foreground/78">
+                      {project.delivery}
+                    </dd>
+                  </div>
+                ) : null}
+              </dl>
+
               <a
-                className="mt-6 inline-flex w-full items-center justify-center bg-primary px-5 py-3 text-center text-sm font-semibold transition-colors hover:bg-primary/92"
+                className="mt-6 inline-flex max-w-full text-left text-sm font-semibold leading-snug text-primary underline decoration-primary/24 underline-offset-4 transition-colors hover:text-primary/76 hover:decoration-primary/55"
                 href={createWhatsAppUrl(locale, "preConstruction", project.name)}
                 rel="noopener noreferrer"
-                style={{ color: "#ffffff" }}
                 target="_blank"
               >
                 {content.projectCta}

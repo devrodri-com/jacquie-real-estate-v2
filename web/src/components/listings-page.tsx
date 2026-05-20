@@ -43,6 +43,10 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
 
 const numberFormatter = new Intl.NumberFormat("en-US");
 
+function getListingEyebrow(listing: Listing) {
+  return [listing.buildingName, listing.area].filter(Boolean).join(" · ");
+}
+
 export function ListingsPage({
   content,
   listings,
@@ -81,9 +85,7 @@ export function ListingsPage({
             <div className="flex flex-1 flex-col p-5 sm:p-6">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary/58">
-                  {[listing.area, listing.city.split(",")[0]]
-                    .filter(Boolean)
-                    .join(" / ")}
+                  {getListingEyebrow(listing)}
                 </p>
                 <h2 className="mt-3 font-display text-3xl leading-tight text-primary sm:text-4xl">
                   {listing.address}
@@ -93,51 +95,24 @@ export function ListingsPage({
                 </p>
               </div>
 
-              <dl className="mt-6 grid gap-3 text-sm text-foreground/68">
-                <div className="flex items-center justify-between gap-4 border-t border-primary/8 pt-3">
-                  <dt>{content.labels.price}</dt>
-                  <dd className="font-semibold text-foreground">
-                    {currencyFormatter.format(listing.priceUsd)}
-                  </dd>
-                </div>
-                <div className="flex items-center justify-between gap-4 border-t border-primary/8 pt-3">
-                  <dt>{content.labels.mls}</dt>
-                  <dd className="font-semibold text-foreground">
-                    {listing.mls}
-                  </dd>
-                </div>
-              </dl>
-
-              <div className="mt-5 grid grid-cols-3 border-y border-primary/8 py-4 text-center text-sm">
-                <div>
-                  <p className="font-semibold text-foreground">{listing.beds}</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.12em] text-foreground/48">
-                    {content.labels.beds}
-                  </p>
-                </div>
-                <div className="border-x border-primary/8">
-                  <p className="font-semibold text-foreground">
-                    {listing.baths}
-                  </p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.12em] text-foreground/48">
-                    {content.labels.baths}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">
-                    {numberFormatter.format(listing.sqft)}
-                  </p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.12em] text-foreground/48">
-                    {content.labels.sqft}
-                  </p>
-                </div>
+              <div className="mt-6 border-t border-primary/8 pt-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-foreground/45">
+                  {content.labels.price}
+                </p>
+                <p className="mt-2 font-display text-3xl leading-none text-primary">
+                  {currencyFormatter.format(listing.priceUsd)}
+                </p>
               </div>
 
-              <div className="mt-5">
-                <span className="inline-flex border border-primary/12 px-3 py-1.5 text-xs font-semibold text-primary/70">
-                  {content.labels.statusBadge}
-                </span>
-              </div>
+              <p className="mt-5 text-sm leading-6 text-foreground/68">
+                {listing.beds} {content.labels.beds} · {listing.baths}{" "}
+                {content.labels.baths} · {numberFormatter.format(listing.sqft)}{" "}
+                {content.labels.sqft}
+              </p>
+
+              <p className="mt-3 text-xs font-medium uppercase tracking-[0.12em] text-foreground/42">
+                {content.labels.mls} {listing.mls}
+              </p>
 
               <a
                 className="mt-6 inline-flex w-full items-center justify-center bg-primary px-5 py-3 text-center text-sm font-semibold leading-snug transition-colors hover:bg-primary/92"

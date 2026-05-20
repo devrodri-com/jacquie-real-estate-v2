@@ -237,10 +237,10 @@
     "labels": {
       "mls": "MLS",
       "price": "Precio",
-      "beds": "Hab.",
-      "baths": "Baños",
-      "sqft": "Sqft",
-      "statusBadge": "Datos verificados en PDF actual"
+      "beds": "hab",
+      "baths": "baños",
+      "sqft": "sqft",
+      "statusBadge": "Información revisada. Confirmar disponibilidad antes de decidir."
     },
     "listingCta": "Consultar por esta propiedad",
     "note": {

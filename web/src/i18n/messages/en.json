@@ -237,10 +237,10 @@
     "labels": {
       "mls": "MLS",
       "price": "Price",
-      "beds": "Beds",
-      "baths": "Baths",
-      "sqft": "Sqft",
-      "statusBadge": "Data verified from current PDF"
+      "beds": "beds",
+      "baths": "baths",
+      "sqft": "sqft",
+      "statusBadge": "Information reviewed. Confirm availability before making a decision."
     },
     "listingCta": "Ask about this property",
     "note": {

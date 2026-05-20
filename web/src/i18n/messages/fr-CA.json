@@ -238,10 +238,10 @@
     "labels": {
       "mls": "MLS",
       "price": "Prix",
-      "beds": "Ch.",
-      "baths": "Sdb",
-      "sqft": "Pi²",
-      "statusBadge": "Données vérifiées dans un PDF récent"
+      "beds": "ch.",
+      "baths": "sdb",
+      "sqft": "pi²",
+      "statusBadge": "Information vérifiée. Confirmer la disponibilité avant toute décision."
     },
     "listingCta": "Demander de l’information sur cette propriété",
     "note": {
