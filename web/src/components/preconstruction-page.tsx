@@ -58,11 +58,11 @@ export function PreconstructionPage({
 
   return (
     <div className="pb-14 pt-12 sm:pb-24 sm:pt-20 lg:pt-24">
-      <section className="max-w-3xl">
+      <section className="max-w-5xl">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary/70">
           {content.hero.eyebrow}
         </p>
-        <h1 className="mt-6 font-display text-5xl leading-[0.96] text-primary sm:text-6xl lg:text-7xl">
+        <h1 className="mt-6 font-display text-5xl leading-[0.96] text-primary sm:text-6xl lg:whitespace-nowrap lg:text-6xl xl:text-7xl">
           {content.hero.title}
         </h1>
         <p className="mt-7 max-w-2xl text-lg leading-8 text-foreground/76 sm:text-xl sm:leading-9">

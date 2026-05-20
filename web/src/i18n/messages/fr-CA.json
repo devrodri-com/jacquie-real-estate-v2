@@ -253,6 +253,75 @@
       "body": "Nous pouvons vérifier si elle est toujours disponible, quels détails doivent être confirmés et si elle correspond à votre situation.",
       "button": "Demander de l’information"
     },
+    "detail": {
+      "backToListings": "Retour aux propriétés",
+      "labels": {
+        "price": "Prix",
+        "beds": "ch.",
+        "baths": "sdb",
+        "sqft": "pi²",
+        "type": "Type",
+        "yearBuilt": "Année de construction",
+        "hoa": "Frais HOA",
+        "parking": "Stationnement",
+        "pets": "Animaux",
+        "furnished": "Meublé",
+        "view": "Vue / emplacement",
+        "mls": "MLS",
+        "perMonth": "par mois",
+        "yes": "Oui",
+        "no": "Non"
+      },
+      "summary": {
+        "eyebrow": "Lecture de la propriété",
+        "headline": "Une vision plus claire avant d’avancer"
+      },
+      "summaries": {
+        "3801-s-ocean-dr-2c": "Une propriété à The Tides Hollywood Beach à évaluer avec contexte si vous envisagez un achat près de la plage. Les informations confirmées permettent de revoir le prix, la superficie, l’immeuble et les conditions principales sans transformer la décision en fiche d’inventaire froide.",
+        "17801-n-bay-rd-505": "Une propriété à Le Frontenac, Sunny Isles Beach, à évaluer avec une lecture claire de la superficie, de l’emplacement et des détails principaux. L’objectif est de comprendre si elle peut correspondre à votre situation avant d’avancer."
+      },
+      "details": {
+        "eyebrow": "Détails principaux",
+        "headline": "Un aperçu clair des informations les plus importantes de la propriété."
+      },
+      "values": {
+        "3801-s-ocean-dr-2c": {
+          "type": "Condominium",
+          "parking": "Un espace et service valet",
+          "pets": "Animaux permis sous conditions",
+          "view": "Immeuble en bord de mer"
+        },
+        "17801-n-bay-rd-505": {
+          "type": "Condominium",
+          "parking": "Stationnement invité et un espace",
+          "pets": "Animaux non permis",
+          "furnished": "Oui",
+          "view": "Vue sur la baie"
+        }
+      },
+      "verification": {
+        "headline": "Active selon le MLS actuel",
+        "body": "Les informations peuvent être mises à jour. Si vous souhaitez avancer, je peux vérifier avec vous la disponibilité, le prix et les conditions actuelles."
+      },
+      "location": {
+        "headline": "Emplacement",
+        "body": "Référence d’emplacement de la propriété. Nous pouvons vérifier le contexte du secteur et les détails avant d’avancer.",
+        "mapTitle": "Carte pour"
+      },
+      "gallery": {
+        "open": "Ouvrir l’image de",
+        "close": "Fermer",
+        "previous": "Image précédente",
+        "next": "Image suivante",
+        "photos": "photos"
+      },
+      "cta": {
+        "headline": "Vous souhaitez revoir cette propriété avec plus de contexte ?",
+        "body": "Envoyez une demande et nous pourrons confirmer la disponibilité, revoir les détails actuels et vérifier si cette propriété correspond à ce que vous recherchez.",
+        "button": "Demander de l’information sur cette propriété"
+      },
+      "imageAltPrefix": "Image de la propriété"
+    },
     "imageAltPrefix": "Image de la propriété"
   },
   "contact": {

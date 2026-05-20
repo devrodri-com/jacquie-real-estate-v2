@@ -252,6 +252,75 @@
       "body": "We can review whether it is still available, which details should be confirmed, and whether it makes sense for your situation.",
       "button": "Ask about a property"
     },
+    "detail": {
+      "backToListings": "Back to listings",
+      "labels": {
+        "price": "Price",
+        "beds": "beds",
+        "baths": "baths",
+        "sqft": "sqft",
+        "type": "Type",
+        "yearBuilt": "Year built",
+        "hoa": "HOA",
+        "parking": "Parking",
+        "pets": "Pets",
+        "furnished": "Furnished",
+        "view": "View / location",
+        "mls": "MLS",
+        "perMonth": "monthly",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "summary": {
+        "eyebrow": "Property read",
+        "headline": "A clearer look before moving forward"
+      },
+      "summaries": {
+        "3801-s-ocean-dr-2c": "A property at The Tides Hollywood Beach to review with context if you are evaluating a purchase near the beach. The confirmed information helps review price, size, building, and key conditions without turning the decision into a cold inventory sheet.",
+        "17801-n-bay-rd-505": "A property at Le Frontenac in Sunny Isles Beach to evaluate with a clear look at size, location, and key details. The goal is to understand whether it may make sense for your situation before moving forward."
+      },
+      "details": {
+        "eyebrow": "Key details",
+        "headline": "A clear view of the most relevant property details."
+      },
+      "values": {
+        "3801-s-ocean-dr-2c": {
+          "type": "Condominium",
+          "parking": "One space and valet",
+          "pets": "Pets allowed with conditions",
+          "view": "Oceanfront building"
+        },
+        "17801-n-bay-rd-505": {
+          "type": "Condominium",
+          "parking": "Guest parking and one space",
+          "pets": "No pets",
+          "furnished": "Yes",
+          "view": "Bay view"
+        }
+      },
+      "verification": {
+        "headline": "Active according to current MLS",
+        "body": "Property information may change. If you want to move forward, I can review current availability, pricing, and conditions with you."
+      },
+      "location": {
+        "headline": "Location",
+        "body": "Property location reference. I can review area context and details with you before moving forward.",
+        "mapTitle": "Map for"
+      },
+      "gallery": {
+        "open": "Open image for",
+        "close": "Close",
+        "previous": "Previous image",
+        "next": "Next image",
+        "photos": "photos"
+      },
+      "cta": {
+        "headline": "Want to review this property with more context?",
+        "body": "Write to me and we can confirm availability, review current details, and see whether this property makes sense for what you are looking for.",
+        "button": "Ask about this property"
+      },
+      "imageAltPrefix": "Property image for"
+    },
     "imageAltPrefix": "Property image for"
   },
   "contact": {

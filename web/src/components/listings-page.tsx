@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { createWhatsAppUrl, type WhatsAppLocale } from "@/lib/whatsapp";
 import type { Listing } from "@/data/listings";
 
@@ -54,11 +55,11 @@ export function ListingsPage({
 }: Readonly<ListingsPageProps>) {
   return (
     <div className="pb-14 pt-12 sm:pb-24 sm:pt-20 lg:pt-24">
-      <section className="max-w-3xl">
+      <section className="max-w-5xl">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary/70">
           {content.hero.eyebrow}
         </p>
-        <h1 className="mt-6 font-display text-5xl leading-[0.96] text-primary sm:text-6xl lg:text-7xl">
+        <h1 className="mt-6 font-display text-5xl leading-[0.96] text-primary sm:text-6xl lg:whitespace-nowrap lg:text-6xl xl:text-7xl">
           {content.hero.title}
         </h1>
         <p className="mt-7 max-w-2xl text-lg leading-8 text-foreground/76 sm:text-xl sm:leading-9">
@@ -72,7 +73,11 @@ export function ListingsPage({
             className="group flex min-h-full flex-col overflow-hidden border border-primary/10 bg-white shadow-[0_18px_60px_rgba(59,39,74,0.07)]"
             key={listing.id}
           >
-            <div className="relative aspect-[4/3] overflow-hidden bg-accent/10">
+            <Link
+              aria-label={listing.address}
+              className="relative block aspect-[4/3] overflow-hidden bg-accent/10"
+              href={`/${locale}/listings/${listing.id}`}
+            >
               <Image
                 alt={`${content.imageAltPrefix} ${listing.address}`}
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
@@ -80,7 +85,7 @@ export function ListingsPage({
                 sizes="(min-width: 1024px) 520px, 90vw"
                 src={listing.image}
               />
-            </div>
+            </Link>
 
             <div className="flex flex-1 flex-col p-5 sm:p-6">
               <div>
@@ -88,7 +93,12 @@ export function ListingsPage({
                   {getListingEyebrow(listing)}
                 </p>
                 <h2 className="mt-3 font-display text-3xl leading-tight text-primary sm:text-4xl">
-                  {listing.address}
+                  <Link
+                    className="transition-colors hover:text-primary/78"
+                    href={`/${locale}/listings/${listing.id}`}
+                  >
+                    {listing.address}
+                  </Link>
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-foreground/62">
                   {listing.city}

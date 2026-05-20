@@ -252,6 +252,75 @@
       "body": "Podemos revisar si sigue disponible, qué datos conviene confirmar y si tiene sentido para tu situación.",
       "button": "Preguntar por una propiedad"
     },
+    "detail": {
+      "backToListings": "Volver a propiedades",
+      "labels": {
+        "price": "Precio",
+        "beds": "hab",
+        "baths": "baños",
+        "sqft": "sqft",
+        "type": "Tipo",
+        "yearBuilt": "Año",
+        "hoa": "HOA",
+        "parking": "Parking",
+        "pets": "Mascotas",
+        "furnished": "Amoblado",
+        "view": "Vista / ubicación",
+        "mls": "MLS",
+        "perMonth": "mensuales",
+        "yes": "Sí",
+        "no": "No"
+      },
+      "summary": {
+        "eyebrow": "Lectura de la propiedad",
+        "headline": "Una mirada clara antes de avanzar"
+      },
+      "summaries": {
+        "3801-s-ocean-dr-2c": "Una propiedad en The Tides Hollywood Beach para mirar con contexto si estás evaluando una compra cerca de la playa. La información confirmada permite revisar precio, tamaño, edificio y condiciones principales sin convertir la decisión en una ficha fría de inventario.",
+        "17801-n-bay-rd-505": "Una propiedad en Le Frontenac, Sunny Isles Beach, para evaluar con una mirada clara sobre tamaño, ubicación y datos principales. El objetivo es entender si puede tener sentido para tu situación antes de avanzar con una decisión."
+      },
+      "details": {
+        "eyebrow": "Datos principales",
+        "headline": "Una vista clara de los datos más relevantes de la propiedad."
+      },
+      "values": {
+        "3801-s-ocean-dr-2c": {
+          "type": "Condominio",
+          "parking": "Un espacio y valet",
+          "pets": "Mascotas permitidas con condiciones",
+          "view": "Edificio frente al mar"
+        },
+        "17801-n-bay-rd-505": {
+          "type": "Condominio",
+          "parking": "Espacio para invitados y un espacio asignado",
+          "pets": "No se permiten mascotas",
+          "furnished": "Sí",
+          "view": "Vista a la bahía"
+        }
+      },
+      "verification": {
+        "headline": "Activa según MLS actual",
+        "body": "La información puede actualizarse. Si querés avanzar, reviso contigo disponibilidad, precio y condiciones actuales."
+      },
+      "location": {
+        "headline": "Ubicación",
+        "body": "Referencia de ubicación de la propiedad. Confirmamos detalles y contexto de zona antes de avanzar.",
+        "mapTitle": "Mapa de"
+      },
+      "gallery": {
+        "open": "Abrir imagen de",
+        "close": "Cerrar",
+        "previous": "Imagen anterior",
+        "next": "Imagen siguiente",
+        "photos": "fotos"
+      },
+      "cta": {
+        "headline": "¿Querés revisar esta propiedad con más contexto?",
+        "body": "Escribime y podemos confirmar disponibilidad, revisar los datos actuales y ver si esta propiedad tiene sentido para lo que estás buscando.",
+        "button": "Consultar por esta propiedad"
+      },
+      "imageAltPrefix": "Imagen de la propiedad"
+    },
     "imageAltPrefix": "Imagen de la propiedad"
   },
   "contact": {

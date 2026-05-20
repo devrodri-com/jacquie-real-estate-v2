@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Listing } from "@/data/listings";
 import { routing, type RouteLocale } from "@/i18n/routing";
 
 export const metadataBase = new URL("https://jacquie-real-estate-v2.vercel.app");
@@ -166,6 +167,61 @@ function getLanguageAlternates(page: MetadataPage): Record<string, string> {
   };
 }
 
+function getListingPath(locale: RouteLocale, listingId: string): string {
+  return `/${locale}/listings/${listingId}`;
+}
+
+function getListingLanguageAlternates(listingId: string): Record<string, string> {
+  return {
+    es: getListingPath("es", listingId),
+    en: getListingPath("en", listingId),
+    "fr-CA": getListingPath("fr-ca", listingId),
+    "x-default": getListingPath(routing.defaultLocale, listingId),
+  };
+}
+
+const listingMetadataByLocale: Record<
+  RouteLocale,
+  Record<string, LocalizedMetadata>
+> = {
+  es: {
+    "3801-s-ocean-dr-2c": {
+      title: "3801 S Ocean Dr #2C | Jacquie Zarate",
+      description:
+        "Conocé 3801 S Ocean Dr #2C en Hollywood Beach con una mirada clara y acompañamiento personalizado en Miami.",
+    },
+    "17801-n-bay-rd-505": {
+      title: "17801 N Bay Rd #505 | Jacquie Zarate",
+      description:
+        "Conocé 17801 N Bay Rd #505 en Sunny Isles Beach con una mirada clara y acompañamiento personalizado en Miami.",
+    },
+  },
+  en: {
+    "3801-s-ocean-dr-2c": {
+      title: "3801 S Ocean Dr #2C | Jacquie Zarate",
+      description:
+        "Review 3801 S Ocean Dr #2C in Hollywood Beach with clear guidance and personalized support in Miami.",
+    },
+    "17801-n-bay-rd-505": {
+      title: "17801 N Bay Rd #505 | Jacquie Zarate",
+      description:
+        "Review 17801 N Bay Rd #505 in Sunny Isles Beach with clear guidance and personalized support in Miami.",
+    },
+  },
+  "fr-ca": {
+    "3801-s-ocean-dr-2c": {
+      title: "3801 S Ocean Dr #2C | Jacquie Zarate",
+      description:
+        "Découvrez 3801 S Ocean Dr #2C à Hollywood Beach avec un accompagnement clair et personnalisé à Miami.",
+    },
+    "17801-n-bay-rd-505": {
+      title: "17801 N Bay Rd #505 | Jacquie Zarate",
+      description:
+        "Découvrez 17801 N Bay Rd #505 à Sunny Isles Beach avec un accompagnement clair et personnalisé à Miami.",
+    },
+  },
+};
+
 export function buildPageMetadata(
   locale: RouteLocale,
   page: MetadataPage,
@@ -186,6 +242,46 @@ export function buildPageMetadata(
     alternates: {
       canonical: path,
       languages: getLanguageAlternates(page),
+    },
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      url: path,
+      siteName: "Jacquie Zarate",
+      locale: openGraphLocaleByLocale[locale],
+      alternateLocale: routing.locales
+        .filter((alternateLocale) => alternateLocale !== locale)
+        .map((alternateLocale) => openGraphLocaleByLocale[alternateLocale]),
+      type: "website",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metadata.title,
+      description: metadata.description,
+      images: [image.url],
+    },
+  };
+}
+
+export function buildListingMetadata(
+  locale: RouteLocale,
+  listing: Listing,
+): Metadata {
+  const metadata = listingMetadataByLocale[locale][listing.id];
+  const path = getListingPath(locale, listing.id);
+  const image = {
+    alt: listing.address,
+    url: openGraphImageByLocale[locale],
+  };
+
+  return {
+    metadataBase,
+    title: metadata.title,
+    description: metadata.description,
+    alternates: {
+      canonical: path,
+      languages: getListingLanguageAlternates(listing.id),
     },
     openGraph: {
       title: metadata.title,
