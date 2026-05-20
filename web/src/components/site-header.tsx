@@ -26,7 +26,7 @@ const navLabels: Record<
 > = {
   es: {
     propertyManagement: "Gestión de propiedades",
-    listings: "Listings",
+    listings: "Propiedades",
     preConstruction: "Preconstrucción",
     about: "Sobre Jacquie",
     contact: "Contacto",

@@ -39,7 +39,7 @@ const footerContent: Record<
     contactTitle: "Contacto",
     links: {
       propertyManagement: "Gestión de propiedades",
-      listings: "Listings",
+      listings: "Propiedades",
       preConstruction: "Preconstrucción",
       about: "Sobre Jacquie",
       contact: "Contacto",
