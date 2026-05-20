@@ -228,6 +228,32 @@
     },
     "imageAltPrefix": "Imagen del proyecto"
   },
+  "listings": {
+    "hero": {
+      "eyebrow": "Listings",
+      "title": "Propiedades seleccionadas",
+      "intro": "Dos propiedades reales para mirar el mercado con contexto, sin convertir la experiencia en un portal."
+    },
+    "labels": {
+      "mls": "MLS",
+      "price": "Precio",
+      "beds": "Hab.",
+      "baths": "Baños",
+      "sqft": "Sqft",
+      "statusBadge": "Datos verificados en PDF actual"
+    },
+    "listingCta": "Consultar por esta propiedad",
+    "note": {
+      "headline": "Disponibilidad a confirmar",
+      "body": "Los datos fueron revisados en PDFs actuales de OneHome. Antes de tomar una decisión, conviene confirmar disponibilidad, estado MLS y cualquier detalle vigente."
+    },
+    "finalCta": {
+      "headline": "¿Querés consultar por una de estas propiedades?",
+      "body": "Podemos revisar si sigue disponible, qué datos conviene confirmar y si tiene sentido para tu situación.",
+      "button": "Preguntar por una propiedad"
+    },
+    "imageAltPrefix": "Imagen de la propiedad"
+  },
   "contact": {
     "hero": {
       "eyebrow": "Contacto",

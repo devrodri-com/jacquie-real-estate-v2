@@ -8,6 +8,7 @@ type MetadataPage =
   | "propertyManagement"
   | "about"
   | "contact"
+  | "listings"
   | "preConstruction";
 
 type LocalizedMetadata = {
@@ -20,6 +21,7 @@ const pageSlugs: Record<MetadataPage, string> = {
   propertyManagement: "property-management",
   about: "about",
   contact: "contact",
+  listings: "listings",
   preConstruction: "pre-construction",
 };
 
@@ -44,6 +46,11 @@ const localeMetadata: Record<RouteLocale, Record<MetadataPage, LocalizedMetadata
       title: "Contacto | Jacquie Zarate",
       description:
         "Escribile a Jacquie por WhatsApp para conversar sobre tu propiedad, una inversión o tu próximo paso en Miami.",
+    },
+    listings: {
+      title: "Listings en Miami | Jacquie Zarate",
+      description:
+        "Explorá propiedades reales en Miami y South Florida con una mirada curada, clara y orientada a conversación.",
     },
     preConstruction: {
       title: "Proyectos en preconstrucción | Jacquie Zarate",
@@ -72,6 +79,11 @@ const localeMetadata: Record<RouteLocale, Record<MetadataPage, LocalizedMetadata
       description:
         "Write to Jacquie on WhatsApp to talk about your property, an investment, or your next step in Miami.",
     },
+    listings: {
+      title: "Miami Listings | Jacquie Zarate",
+      description:
+        "Explore real properties in Miami and South Florida with a curated, clear, conversation-first approach.",
+    },
     preConstruction: {
       title: "Pre-construction projects | Jacquie Zarate",
       description:
@@ -98,6 +110,11 @@ const localeMetadata: Record<RouteLocale, Record<MetadataPage, LocalizedMetadata
       title: "Contact | Jacquie Zarate",
       description:
         "Envoyez une demande à Jacquie sur WhatsApp pour parler de votre propriété, d’un investissement ou de votre prochaine étape à Miami.",
+    },
+    listings: {
+      title: "Propriétés à Miami | Jacquie Zarate",
+      description:
+        "Explorez des propriétés réelles à Miami et dans le sud de la Floride avec une approche claire, sélective et axée sur la conversation.",
     },
     preConstruction: {
       title: "Projets en préconstruction | Jacquie Zarate",

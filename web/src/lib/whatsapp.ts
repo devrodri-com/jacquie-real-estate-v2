@@ -7,6 +7,7 @@ export type WhatsAppContext =
   | "propertyManagement"
   | "midConversion"
   | "final"
+  | "listing"
   | "preConstruction";
 
 export const WHATSAPP_MESSAGES: Record<
@@ -21,6 +22,8 @@ export const WHATSAPP_MESSAGES: Record<
       "Hola Jacquie, quiero saber si mi propiedad puede gestionarse mejor.",
     final:
       "Hola Jacquie, quiero contarte mi situación y ver cuál sería el próximo paso.",
+    listing:
+      "Hola Jacquie, quiero consultar por una propiedad que vi en tu web.",
     preConstruction:
       "Hola Jacquie, quiero consultar por un proyecto de preconstrucción en Miami.",
   },
@@ -32,6 +35,8 @@ export const WHATSAPP_MESSAGES: Record<
       "Hi Jacquie, I’d like to understand if my property could be managed better.",
     final:
       "Hi Jacquie, I’d like to share my situation and understand the next step.",
+    listing:
+      "Hi Jacquie, I’d like to ask about a property I saw on your website.",
     preConstruction:
       "Hi Jacquie, I’d like to ask about a pre-construction project in Miami.",
   },
@@ -43,6 +48,8 @@ export const WHATSAPP_MESSAGES: Record<
       "Bonjour Jacquie, j’aimerais savoir si ma propriété pourrait être mieux gérée.",
     final:
       "Bonjour Jacquie, j’aimerais expliquer ma situation et comprendre la prochaine étape.",
+    listing:
+      "Bonjour Jacquie, j’aimerais demander de l’information sur une propriété vue sur votre site.",
     preConstruction:
       "Bonjour Jacquie, j’aimerais demander de l’information sur un projet en préconstruction à Miami.",
   },
@@ -53,7 +60,21 @@ function getWhatsAppMessage(
   context: WhatsAppContext,
   projectName?: string,
 ): string {
-  if (context !== "preConstruction" || !projectName) {
+  if (!projectName) {
+    return WHATSAPP_MESSAGES[locale][context];
+  }
+
+  if (context === "listing") {
+    const listingMessages: Record<WhatsAppLocale, string> = {
+      es: `Hola Jacquie, quiero consultar por esta propiedad: ${projectName}.`,
+      en: `Hi Jacquie, I’d like to ask about this property: ${projectName}.`,
+      "fr-ca": `Bonjour Jacquie, j’aimerais demander de l’information sur cette propriété : ${projectName}.`,
+    };
+
+    return listingMessages[locale];
+  }
+
+  if (context !== "preConstruction") {
     return WHATSAPP_MESSAGES[locale][context];
   }
 

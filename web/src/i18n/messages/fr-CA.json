@@ -229,6 +229,32 @@
     },
     "imageAltPrefix": "Image du projet"
   },
+  "listings": {
+    "hero": {
+      "eyebrow": "Propriétés",
+      "title": "Propriétés sélectionnées",
+      "intro": "Deux propriétés réelles pour lire le marché avec contexte, sans transformer l’expérience en portail."
+    },
+    "labels": {
+      "mls": "MLS",
+      "price": "Prix",
+      "beds": "Ch.",
+      "baths": "Sdb",
+      "sqft": "Pi²",
+      "statusBadge": "Données vérifiées dans un PDF récent"
+    },
+    "listingCta": "Demander de l’information sur cette propriété",
+    "note": {
+      "headline": "Disponibilité à confirmer",
+      "body": "Les données ont été vérifiées dans des PDFs récents de OneHome. Avant toute décision, il faut confirmer la disponibilité, le statut MLS et les détails à jour."
+    },
+    "finalCta": {
+      "headline": "Vous souhaitez demander de l’information sur une propriété ?",
+      "body": "Nous pouvons vérifier si elle est toujours disponible, quels détails doivent être confirmés et si elle correspond à votre situation.",
+      "button": "Demander de l’information"
+    },
+    "imageAltPrefix": "Image de la propriété"
+  },
   "contact": {
     "hero": {
       "eyebrow": "Contact",

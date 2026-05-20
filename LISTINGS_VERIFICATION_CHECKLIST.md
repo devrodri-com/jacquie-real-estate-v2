@@ -43,29 +43,30 @@ Listing:
 - Address: `3801 S Ocean Dr #2C, Hollywood, FL 33019`
 - Building: `The Tides Hollywood Beach`
 - MLS known: `A11955684`
+- Current source reviewed: `OneHome PDF generated May 19, 2026 at 9:07 p.m.`
 
 | Campo | Dato conocido | Estado | Nota |
 |---|---|---|---|
-| Precio vigente | Unknown | `needs_current_verification` | No publicar precio hasta confirmacion actual. |
-| Precio anterior | USD 489,000 | `needs_current_verification` | Tratar como historico, no como vigente. |
-| Price reduced | Unknown | `needs_current_verification` | Solo mostrar si precio anterior y actual estan confirmados. |
-| Disponibilidad | Unknown | `needs_current_verification` | Confirmar antes de cualquier preview. |
-| Estado MLS | Unknown | `needs_current_verification` | Confirmar si sigue activo, pendiente, cerrado, etc. |
-| MLS number | A11955684 | `needs_current_verification` | Confirmar contra fuente actual. |
-| Direccion | 3801 S Ocean Dr #2C, Hollywood, FL 33019 | `needs_current_verification` | Confirmar formato final. |
-| Type | Condominium | `needs_current_verification` | Confirmar. |
-| Beds | 2 | `needs_current_verification` | Confirmar. |
-| Baths | 2 | `needs_current_verification` | Confirmar. |
-| Size | 874 sqft | `needs_current_verification` | Confirmar. |
-| Year built | 1969 | `needs_current_verification` | Confirmar si se muestra. |
-| HOA | USD 1,038/month | `needs_current_verification` | Confirmar vigente antes de publicar. |
-| View / location | Partial ocean / Oceanfront | `needs_current_verification` | Confirmar wording exacto. |
-| Rental policy | Daily rentals allowed | `needs_current_verification` | Confirmar y revisar matices antes de publicar. |
-| Parking | One Space, Valet | `needs_current_verification` | Confirmar. |
-| Pets | Conditional, Yes | `needs_current_verification` | Confirmar. |
-| Building name | The Tides Hollywood Beach | `needs_current_verification` | Confirmar. |
-| Atribucion | Jacquie / Miami Life Realty | `needs_current_verification` | Limpiar cualquier referencia a Esteban. |
-| Imagenes | ImageKit / fuente pendiente | `needs_current_verification` | Confirmar permiso y seleccionar imagenes. |
+| Precio vigente | USD 459,000 | `verified` | PDF actual muestra `List Price: $459,000`. |
+| Precio anterior | USD 489,000 | `needs_current_verification` | Historico previo fuera del PDF actual; no mostrar como `Antes`. |
+| Price reduced | Unknown | `do_not_publish` | El PDF actual no confirma precio anterior ni reduccion. |
+| Disponibilidad | Active | `verified` | Confirmed active via current MLS share. PDF actual muestra `Status: Active`. |
+| Estado MLS | Active | `verified` | Confirmed active via current MLS share. PDF actual muestra `Status: Active`. |
+| MLS number | A11955684 | `verified` | Visible en watermark de imagen del PDF y dato conocido confirmado. |
+| Direccion | 3801 S Ocean Dr #2C, Hollywood, FL 33019 | `verified` | Confirmada por nombre del PDF actual y listing esperado. |
+| Type | Condominium | `verified` | PDF actual muestra `Type: Condominium`. |
+| Beds | 2 | `verified` | PDF actual muestra `Beds: 2`. |
+| Baths | 2 | `verified` | PDF actual muestra `2 full`. |
+| Size | 874 sqft | `verified` | PDF actual muestra `Size: 874 sqft`. |
+| Year built | 1969 | `verified` | PDF actual muestra `Year Built: 1969`. |
+| HOA | USD 1,038/month | `verified` | PDF actual muestra `HOA Fee: $1,038 Monthly`. |
+| View / location | Oceanfront building / Ocean Access / OceanFront | `verified` | PDF actual muestra waterfront details; UI should keep wording neutral. |
+| Rental policy | OK To Lease; public remarks mention daily rentals | `verified` | Do not publish income language or aggressive rental claims. |
+| Parking | One Space, Valet | `verified` | PDF actual muestra garage/parking features. |
+| Pets | Conditional, Yes | `verified` | PDF actual muestra `Pets Allowed: Conditional, Yes`. |
+| Building name | The Tides Hollywood Beach | `verified` | PDF actual muestra subdivision `TIDES ON HOLLYWOOD BEACH`. |
+| Atribucion | Jacquie / Miami Life Realty for UI | `verified` | PDF trae Esteban como agente de origen; UI debe limpiarlo por completo. |
+| Imagenes | Usable image extracted from current PDF | `verified` | Imagen principal local sin referencia visible a Esteban. |
 | Contacto Esteban | No publicable | `do_not_publish` | No usar en UI, metadata visible ni contacto. |
 
 ## 3. Checklist especifico: 17801 N Bay Rd #505
@@ -75,30 +76,31 @@ Listing:
 - Address: `17801 N Bay Rd #505, Sunny Isles Beach, FL 33160`
 - Building: `Le Frontenac`
 - MLS known: `A11883428`
+- Current source reviewed: `OneHome PDF generated May 18, 2026 at 10:49 a.m.`
 
 | Campo | Dato conocido | Estado | Nota |
 |---|---|---|---|
-| Precio vigente | Reportado como USD 455,000 en OneHome/MLS | `needs_current_verification` | Confirmar fuente actual antes de publicar. |
-| Precio anterior | USD 465,000 | `needs_current_verification` | Confirmar si se quiere mostrar `Previously / Antes / Avant`. |
-| Price reduced | Posible reduccion USD 10,000 | `needs_current_verification` | Solo publicar si ambos precios estan confirmados. |
-| Disponibilidad | Unknown | `needs_current_verification` | Confirmar antes de cualquier preview. |
-| Estado MLS | Unknown | `needs_current_verification` | Confirmar si sigue activo, pendiente, cerrado, etc. |
-| MLS number | A11883428 | `needs_current_verification` | Confirmar contra fuente actual. |
-| Direccion | 17801 N Bay Rd #505, Sunny Isles Beach, FL 33160 | `needs_current_verification` | Confirmar formato final. |
-| Type | Condominium | `needs_current_verification` | Confirmar. |
-| Beds | 2 | `needs_current_verification` | Confirmar. |
-| Baths | 2 | `needs_current_verification` | Confirmar. |
-| Size | 1,330 sqft | `needs_current_verification` | Confirmar. |
-| Year built | 1991 | `needs_current_verification` | Confirmar si se muestra. |
-| HOA | USD 755/month | `needs_current_verification` | Confirmar vigente antes de publicar. |
-| View | Bay view | `needs_current_verification` | Confirmar wording exacto. |
-| Furnished | Yes | `needs_current_verification` | Confirmar si se muestra. |
-| Rental policy | Unknown | `needs_current_verification` | No inferir short-term rental policy. |
-| Parking | Guest, One Space | `needs_current_verification` | Confirmar. |
-| Pets | No | `needs_current_verification` | Confirmar. |
-| Building name | Le Frontenac | `needs_current_verification` | Confirmar. |
-| Atribucion | Jacquie / Miami Life Realty | `needs_current_verification` | Limpiar cualquier referencia a Esteban. |
-| Imagenes | ImageKit / fuente pendiente | `needs_current_verification` | Confirmar permiso y seleccionar imagenes. |
+| Precio vigente | USD 455,000 | `verified` | PDF actual muestra `List Price: $455,000`. |
+| Precio anterior | USD 465,000 | `needs_current_verification` | Historico previo fuera del PDF actual; no mostrar como `Previously / Antes / Avant`. |
+| Price reduced | Posible reduccion USD 10,000 | `do_not_publish` | El PDF actual no confirma precio anterior; no mostrar reduccion. |
+| Disponibilidad | Active | `verified` | Confirmed active via current MLS share. PDF actual muestra `Status: Active`. |
+| Estado MLS | Active | `verified` | Confirmed active via current MLS share. PDF actual muestra `Status: Active`. |
+| MLS number | A11883428 | `verified` | Visible en watermark de imagen del PDF y dato conocido confirmado. |
+| Direccion | 17801 N Bay Rd #505, Sunny Isles Beach, FL 33160 | `verified` | Confirmada por nombre del PDF actual y listing esperado. |
+| Type | Condominium | `verified` | PDF actual muestra `Type: Condominium`. |
+| Beds | 2 | `verified` | PDF actual muestra `Beds: 2`. |
+| Baths | 2 | `verified` | PDF actual muestra `2 full`. |
+| Size | 1,330 sqft | `verified` | PDF actual muestra `Size: 1,330 sqft`. |
+| Year built | 1991 | `verified` | PDF actual muestra `Year Built: 1991`. |
+| HOA | USD 755/month | `verified` | PDF actual muestra `HOA Fee: $755 Monthly`. |
+| View | Bay view | `verified` | PDF actual muestra `View: Bay`. |
+| Furnished | Yes | `verified` | Public remarks state offered fully furnished. |
+| Rental policy | Lease considered yes / no restrictions, OK to lease | `verified` | Do not publish as STR or income claim. |
+| Parking | Guest, One Space | `verified` | PDF actual muestra garage/parking features. |
+| Pets | No | `verified` | PDF actual muestra `Pets Allowed: No`. |
+| Building name | Le Frontenac | `verified` | PDF actual muestra subdivision `LE FRONTENAC CONDO`. |
+| Atribucion | Jacquie / Miami Life Realty for UI | `verified` | PDF trae Esteban como agente de origen; UI debe limpiarlo por completo. |
+| Imagenes | Usable image extracted from current PDF | `verified` | Imagen principal local sin referencia visible a Esteban. |
 | Contacto Esteban | No publicable | `do_not_publish` | No usar en UI, metadata visible ni contacto. |
 
 ## 4. Reglas de publicacion
@@ -136,12 +138,16 @@ Pedir o revisar:
 
 ## 6. Decision sugerida
 
-Decision recomendada ahora:
+Decision actual despues de revisar PDFs vigentes:
 
+- Crear `/[locale]/listings` como pagina secundaria curada de 2 previews reales.
 - Mantener listings fuera de Home por ahora.
-- No crear `/listings` todavia.
+- No agregar Listings al Header todavia.
+- Agregar Listings solo al Footer como exploracion secundaria.
 - No crear detalle por listing todavia.
-- Preparar 2 previews reales solo cuando los campos criticos esten en `verified`.
+- No crear filtros, search, mapa ni paginacion.
+- No mostrar price reduction porque los precios anteriores no estan confirmados dentro de los PDFs actuales.
+- No mostrar claims de renta, ROI, ocupacion, disponibilidad garantizada ni urgencia comercial.
 
 Campos criticos para habilitar una preview:
 
@@ -156,4 +162,4 @@ Campos criticos para habilitar una preview:
 - atribucion limpia sin Esteban;
 - copy revisado sin claims no confirmados.
 
-Si cualquiera de esos campos queda en `needs_current_verification`, el listing puede seguir en inventario interno, pero no debe publicarse como preview definitiva.
+Los campos criticos quedaron `verified` con los PDFs actuales para una preview curada. Los campos no criticos que requieran matices deben omitirse de UI o mantenerse como datos internos.

@@ -228,6 +228,32 @@
     },
     "imageAltPrefix": "Project image for"
   },
+  "listings": {
+    "hero": {
+      "eyebrow": "Listings",
+      "title": "Selected properties",
+      "intro": "Two real properties to read the market with context, without turning the experience into a portal."
+    },
+    "labels": {
+      "mls": "MLS",
+      "price": "Price",
+      "beds": "Beds",
+      "baths": "Baths",
+      "sqft": "Sqft",
+      "statusBadge": "Data verified from current PDF"
+    },
+    "listingCta": "Ask about this property",
+    "note": {
+      "headline": "Availability to confirm",
+      "body": "The data was reviewed from current OneHome PDFs. Before making a decision, availability, MLS status, and any current details should be confirmed."
+    },
+    "finalCta": {
+      "headline": "Want to ask about one of these properties?",
+      "body": "We can review whether it is still available, which details should be confirmed, and whether it makes sense for your situation.",
+      "button": "Ask about a property"
+    },
+    "imageAltPrefix": "Property image for"
+  },
   "contact": {
     "hero": {
       "eyebrow": "Contact",
