@@ -75,7 +75,7 @@ export function ContactPage({ locale, content }: Readonly<ContactPageProps>) {
             </h1>
           </div>
 
-          <div className="border-l border-primary/12 pl-0 lg:pl-8">
+          <div className="border-l border-primary/12 pl-4 lg:pl-8">
             <p className="max-w-xl text-lg leading-8 text-foreground/72">
               {content.hero.body}
             </p>

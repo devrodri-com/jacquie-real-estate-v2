@@ -73,6 +73,10 @@ function getLocalizedPath(pathname: string, targetLocale: RouteLocale): string {
   return remainingPath ? `/${targetLocale}/${remainingPath}` : `/${targetLocale}`;
 }
 
+function isActiveNavItem(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function SiteHeader() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -144,7 +148,12 @@ export function SiteHeader() {
           >
             {desktopNavItems.map((item) => (
               <Link
-                className="text-sm font-medium text-foreground/70 transition-colors hover:text-primary"
+                aria-current={isActiveNavItem(pathname, item.href) ? "page" : undefined}
+                className={
+                  isActiveNavItem(pathname, item.href)
+                    ? "relative text-sm font-semibold text-primary after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:bg-primary/55"
+                    : "text-sm font-medium text-foreground/70 transition-colors hover:text-primary"
+                }
                 href={item.href}
                 key={item.href}
               >
@@ -228,7 +237,12 @@ export function SiteHeader() {
         >
           {mobileNavItems.map((item) => (
             <Link
-              className="border-b border-primary/8 py-4 text-sm font-semibold text-foreground/76 transition-colors last:border-b-0 hover:text-primary"
+              aria-current={isActiveNavItem(pathname, item.href) ? "page" : undefined}
+              className={
+                isActiveNavItem(pathname, item.href)
+                  ? "border-b border-primary/8 py-4 text-sm font-semibold text-primary last:border-b-0"
+                  : "border-b border-primary/8 py-4 text-sm font-semibold text-foreground/76 transition-colors last:border-b-0 hover:text-primary"
+              }
               href={item.href}
               key={item.href}
               onClick={() => setIsMenuOpen(false)}

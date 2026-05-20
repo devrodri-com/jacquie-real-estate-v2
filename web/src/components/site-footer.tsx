@@ -195,7 +195,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-primary/8">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-5 text-xs text-foreground/50 sm:px-8 md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-3 px-5 py-5 text-center text-xs text-foreground/50 sm:px-8 md:flex-row md:items-center md:justify-between md:text-left">
           <p>© Jacquie Zarate</p>
           <a
             className="transition-colors hover:text-primary"

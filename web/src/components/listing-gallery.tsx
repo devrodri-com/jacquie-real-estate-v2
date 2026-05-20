@@ -1,7 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type TouchEvent,
+} from "react";
 
 type ListingGalleryLabels = {
   close: string;
@@ -25,6 +31,7 @@ export function ListingGallery({
   labels,
 }: Readonly<ListingGalleryProps>) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const touchStartX = useRef<number | null>(null);
   const activeImage = activeIndex === null ? null : images[activeIndex];
 
   const showPrevious = useCallback(() => {
@@ -64,6 +71,37 @@ export function ListingGallery({
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [activeIndex, showNext, showPrevious]);
+
+  const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = event.touches[0]?.clientX ?? null;
+  };
+
+  const handleTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null || images.length <= 1) {
+      touchStartX.current = null;
+      return;
+    }
+
+    const touchEndX = event.changedTouches[0]?.clientX ?? null;
+
+    if (touchEndX === null) {
+      touchStartX.current = null;
+      return;
+    }
+
+    const swipeDistance = touchEndX - touchStartX.current;
+    const minimumSwipeDistance = 48;
+
+    if (swipeDistance > minimumSwipeDistance) {
+      showPrevious();
+    }
+
+    if (swipeDistance < -minimumSwipeDistance) {
+      showNext();
+    }
+
+    touchStartX.current = null;
+  };
 
   if (images.length === 0) {
     return null;
@@ -129,6 +167,8 @@ export function ListingGallery({
         <div
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center bg-[#17101d]/96 px-4 py-6 backdrop-blur-sm"
+          onTouchEnd={handleTouchEnd}
+          onTouchStart={handleTouchStart}
           role="dialog"
         >
           <div className="absolute left-4 top-4 text-sm font-medium text-white/78">
