@@ -1,9 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   createWhatsAppUrl,
   type WhatsAppLocale,
 } from "@/lib/whatsapp";
-import type { PreconstructionProject } from "@/data/preconstruction-projects";
+import {
+  getVisiblePreconstructionProjects,
+  type PreconstructionProject,
+} from "@/data/preconstruction-projects";
 
 type PreconstructionPageContent = {
   hero: {
@@ -41,19 +45,16 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
 });
 
-const visiblePreconstructionProjectIds = new Set([
-  "2200-brickell",
-  "elle-residences",
-  "midtown-park",
-]);
-
 export function PreconstructionPage({
   content,
   locale,
   projects,
 }: Readonly<PreconstructionPageProps>) {
-  const visibleProjects = projects.filter((project) =>
-    visiblePreconstructionProjectIds.has(project.id),
+  const visibleProjectIds = new Set(
+    getVisiblePreconstructionProjects().map((project) => project.id),
+  );
+  const visibleProjects = projects.filter(
+    (project) => visibleProjectIds.has(project.id) && project.detailSlug,
   );
 
   return (
@@ -76,7 +77,11 @@ export function PreconstructionPage({
             className="group flex min-h-full flex-col overflow-hidden border border-primary/8 bg-white/62"
             key={project.id}
           >
-            <div className="relative aspect-[4/3] overflow-hidden bg-accent/10">
+            <Link
+              aria-label={project.name}
+              className="relative block aspect-[4/3] overflow-hidden bg-accent/10"
+              href={`/${locale}/pre-construction/${project.detailSlug}`}
+            >
               <Image
                 alt={`${content.imageAltPrefix} ${project.name}`}
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
@@ -84,7 +89,7 @@ export function PreconstructionPage({
                 sizes="(min-width: 1024px) 340px, (min-width: 640px) 45vw, 90vw"
                 src={project.heroImage}
               />
-            </div>
+            </Link>
 
             <div className="flex flex-1 flex-col p-5 sm:p-6">
               <div>
@@ -92,7 +97,12 @@ export function PreconstructionPage({
                   {[project.area, project.city].filter(Boolean).join(" / ")}
                 </p>
                 <h2 className="mt-3 font-display text-3xl leading-tight text-primary">
-                  {project.name}
+                  <Link
+                    className="transition-colors hover:text-primary/78"
+                    href={`/${locale}/pre-construction/${project.detailSlug}`}
+                  >
+                    {project.name}
+                  </Link>
                 </h2>
               </div>
 

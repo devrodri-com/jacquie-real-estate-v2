@@ -227,6 +227,74 @@
       "body": "Nous pouvons revoir les projets, les secteurs et les informations actuelles sans précipiter la décision ni nous appuyer sur des promesses exagérées.",
       "button": "Contacter Jacquie"
     },
+    "detail": {
+      "backToPreconstruction": "Retour à la préconstruction",
+      "labels": {
+        "area": "Secteur",
+        "city": "Ville",
+        "address": "Adresse",
+        "buildingType": "Type de projet",
+        "designTeam": "Design / architecture",
+        "priceFrom": "À partir de",
+        "delivery": "Livraison",
+        "status": "État"
+      },
+      "statusBadge": "Information à confirmer",
+      "priceQualifier": "sous réserve de confirmation actuelle",
+      "deliveryQualifier": "sous réserve de confirmation actuelle",
+      "summary": {
+        "eyebrow": "Lecture du projet",
+        "headline": "Une option à évaluer avec contexte",
+        "body": "Un projet à évaluer avec une lecture claire du secteur, du prix de départ et de l’étape actuelle. La priorité est de confirmer les informations à jour et de comprendre s’il correspond à votre situation."
+      },
+      "summaries": {
+        "2200-brickell": "Un projet résidentiel à Brickell à évaluer avec une lecture claire du secteur, du prix de départ et de l’étape du projet. Il n’est pas présenté comme une recommandation fermée : l’objectif est de confirmer les informations actuelles et de comprendre s’il correspond à votre situation.",
+        "elle-residences": "Un projet à Edgewater qui peut servir de référence pour évaluer de nouvelles options à Miami avec des critères clairs. Avant d’avancer, il faut revoir la disponibilité, le prix actuel et les conditions actuelles.",
+        "midtown-park": "Une option à Midtown à évaluer avec le contexte du secteur et de l’étape du projet. L’objectif est d’organiser l’information initiale avant de décider s’il vaut la peine d’approfondir."
+      },
+      "details": {
+        "eyebrow": "Détails principaux",
+        "headline": "Détails initiaux du projet"
+      },
+      "sections": {
+        "highlights": "Caractéristiques pertinentes",
+        "residences": "Résidences",
+        "unitMix": "Types d’unités",
+        "amenities": "Commodités et mode de vie",
+        "paymentPlan": "Plan de paiement",
+        "location": "Emplacement"
+      },
+      "paymentPlanNote": "Le plan de paiement doit être confirmé avec des informations officielles à jour.",
+      "locationBody": "Référence d’emplacement du projet. Avant d’avancer, il faut revoir le contexte du secteur, l’accès et les détails officiels à jour.",
+      "mapTitle": "Carte pour",
+      "review": {
+        "eyebrow": "Avant d’avancer",
+        "headline": "Ce qu’il faut vérifier",
+        "items": [
+          "Disponibilité actuelle du projet.",
+          "Prix actuel et conditions actuelles.",
+          "Livraison estimée et état commercial.",
+          "Documents officiels et matériel à jour."
+        ]
+      },
+      "verification": {
+        "headline": "Information initiale",
+        "body": "Les informations sur ce projet peuvent être mises à jour. Si vous souhaitez avancer, nous pouvons vérifier le prix, la disponibilité, la livraison et les conditions actuelles avant toute décision."
+      },
+      "gallery": {
+        "open": "Ouvrir l’image de",
+        "close": "Fermer",
+        "previous": "Image précédente",
+        "next": "Image suivante",
+        "photos": "photos"
+      },
+      "cta": {
+        "headline": "Vous souhaitez évaluer ce projet avec plus de contexte ?",
+        "body": "Envoyez une demande et nous pourrons confirmer les informations actuelles avant d’avancer.",
+        "button": "Demander de l’information sur ce projet"
+      },
+      "imageAltPrefix": "Image du projet"
+    },
     "imageAltPrefix": "Image du projet"
   },
   "listings": {

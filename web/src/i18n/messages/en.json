@@ -226,6 +226,74 @@
       "body": "We can review projects, areas, and current information without rushing the decision or relying on exaggerated promises.",
       "button": "Talk to Jacquie"
     },
+    "detail": {
+      "backToPreconstruction": "Back to pre-construction",
+      "labels": {
+        "area": "Area",
+        "city": "City",
+        "address": "Address",
+        "buildingType": "Project type",
+        "designTeam": "Design / architecture",
+        "priceFrom": "From",
+        "delivery": "Delivery",
+        "status": "Status"
+      },
+      "statusBadge": "Information to confirm",
+      "priceQualifier": "subject to current confirmation",
+      "deliveryQualifier": "subject to current confirmation",
+      "summary": {
+        "eyebrow": "Project read",
+        "headline": "An option to review with context",
+        "body": "A project to evaluate with a clear look at area, starting price, and current stage. The priority is to confirm current information and understand whether it fits your situation."
+      },
+      "summaries": {
+        "2200-brickell": "A residential project in Brickell to review with a clear look at area, starting price, and project stage. It is not presented as a closed recommendation: the goal is to confirm current information and understand whether it fits your situation.",
+        "elle-residences": "A project in Edgewater that can serve as a reference for evaluating new options in Miami with clear criteria. Before moving forward, it is worth reviewing availability, current pricing, and current conditions.",
+        "midtown-park": "An option in Midtown to review with context around area and project stage. The goal is to organize initial information before deciding whether it is worth going deeper."
+      },
+      "details": {
+        "eyebrow": "Key details",
+        "headline": "Initial project details"
+      },
+      "sections": {
+        "highlights": "Relevant highlights",
+        "residences": "Residences",
+        "unitMix": "Unit mix",
+        "amenities": "Amenities and lifestyle",
+        "paymentPlan": "Payment plan",
+        "location": "Location"
+      },
+      "paymentPlanNote": "The payment plan must be confirmed with updated official information.",
+      "locationBody": "Project location reference. Before moving forward, it is worth reviewing area context, access, and updated official details.",
+      "mapTitle": "Map for",
+      "review": {
+        "eyebrow": "Before moving forward",
+        "headline": "What should be reviewed",
+        "items": [
+          "Current project availability.",
+          "Current pricing and conditions.",
+          "Estimated delivery and commercial status.",
+          "Official documents and updated materials."
+        ]
+      },
+      "verification": {
+        "headline": "Initial information",
+        "body": "Project information may change. If you want to move forward, I can review current pricing, availability, delivery, and conditions with you before making a decision."
+      },
+      "gallery": {
+        "open": "Open image for",
+        "close": "Close",
+        "previous": "Previous image",
+        "next": "Next image",
+        "photos": "photos"
+      },
+      "cta": {
+        "headline": "Want to review this project with more context?",
+        "body": "Write to me and we can confirm current information before moving forward.",
+        "button": "Ask about this project"
+      },
+      "imageAltPrefix": "Project image for"
+    },
     "imageAltPrefix": "Project image for"
   },
   "listings": {

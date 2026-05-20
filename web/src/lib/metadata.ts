@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { Listing } from "@/data/listings";
+import type { PreconstructionProject } from "@/data/preconstruction-projects";
 import { routing, type RouteLocale } from "@/i18n/routing";
 
 export const metadataBase = new URL("https://jacquie-real-estate-v2.vercel.app");
@@ -180,6 +181,27 @@ function getListingLanguageAlternates(listingId: string): Record<string, string>
   };
 }
 
+function getPreconstructionProjectPath(
+  locale: RouteLocale,
+  projectSlug: string,
+): string {
+  return `/${locale}/pre-construction/${projectSlug}`;
+}
+
+function getPreconstructionProjectLanguageAlternates(
+  projectSlug: string,
+): Record<string, string> {
+  return {
+    es: getPreconstructionProjectPath("es", projectSlug),
+    en: getPreconstructionProjectPath("en", projectSlug),
+    "fr-CA": getPreconstructionProjectPath("fr-ca", projectSlug),
+    "x-default": getPreconstructionProjectPath(
+      routing.defaultLocale,
+      projectSlug,
+    ),
+  };
+}
+
 const listingMetadataByLocale: Record<
   RouteLocale,
   Record<string, LocalizedMetadata>
@@ -218,6 +240,63 @@ const listingMetadataByLocale: Record<
       title: "17801 N Bay Rd #505 | Jacquie Zarate",
       description:
         "Découvrez 17801 N Bay Rd #505 à Sunny Isles Beach avec un accompagnement clair et personnalisé à Miami.",
+    },
+  },
+};
+
+const preconstructionProjectMetadataByLocale: Record<
+  RouteLocale,
+  Record<string, LocalizedMetadata>
+> = {
+  es: {
+    "2200-brickell": {
+      title: "2200 Brickell Residences | Jacquie Zarate",
+      description:
+        "Evaluá 2200 Brickell Residences en Brickell con una mirada clara y acompañamiento personalizado, sin promesas exageradas.",
+    },
+    "elle-residences": {
+      title: "ELLE Residences Miami | Jacquie Zarate",
+      description:
+        "Evaluá ELLE Residences Miami en Edgewater con una mirada clara y acompañamiento personalizado, sin promesas exageradas.",
+    },
+    "midtown-park": {
+      title: "Midtown Park | Jacquie Zarate",
+      description:
+        "Evaluá Midtown Park en Midtown con una mirada clara y acompañamiento personalizado, sin promesas exageradas.",
+    },
+  },
+  en: {
+    "2200-brickell": {
+      title: "2200 Brickell Residences | Jacquie Zarate",
+      description:
+        "Review 2200 Brickell Residences in Brickell with clear guidance and personalized support, without exaggerated promises.",
+    },
+    "elle-residences": {
+      title: "ELLE Residences Miami | Jacquie Zarate",
+      description:
+        "Review ELLE Residences Miami in Edgewater with clear guidance and personalized support, without exaggerated promises.",
+    },
+    "midtown-park": {
+      title: "Midtown Park | Jacquie Zarate",
+      description:
+        "Review Midtown Park in Midtown with clear guidance and personalized support, without exaggerated promises.",
+    },
+  },
+  "fr-ca": {
+    "2200-brickell": {
+      title: "2200 Brickell Residences | Jacquie Zarate",
+      description:
+        "Évaluez 2200 Brickell Residences à Brickell avec un accompagnement clair et personnalisé, sans promesses exagérées.",
+    },
+    "elle-residences": {
+      title: "ELLE Residences Miami | Jacquie Zarate",
+      description:
+        "Évaluez ELLE Residences Miami à Edgewater avec un accompagnement clair et personnalisé, sans promesses exagérées.",
+    },
+    "midtown-park": {
+      title: "Midtown Park | Jacquie Zarate",
+      description:
+        "Évaluez Midtown Park à Midtown avec un accompagnement clair et personnalisé, sans promesses exagérées.",
     },
   },
 };
@@ -282,6 +361,47 @@ export function buildListingMetadata(
     alternates: {
       canonical: path,
       languages: getListingLanguageAlternates(listing.id),
+    },
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      url: path,
+      siteName: "Jacquie Zarate",
+      locale: openGraphLocaleByLocale[locale],
+      alternateLocale: routing.locales
+        .filter((alternateLocale) => alternateLocale !== locale)
+        .map((alternateLocale) => openGraphLocaleByLocale[alternateLocale]),
+      type: "website",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metadata.title,
+      description: metadata.description,
+      images: [image.url],
+    },
+  };
+}
+
+export function buildPreconstructionProjectMetadata(
+  locale: RouteLocale,
+  project: PreconstructionProject,
+): Metadata {
+  const metadata = preconstructionProjectMetadataByLocale[locale][project.id];
+  const projectSlug = project.detailSlug ?? project.slug;
+  const path = getPreconstructionProjectPath(locale, projectSlug);
+  const image = {
+    alt: project.name,
+    url: openGraphImageByLocale[locale],
+  };
+
+  return {
+    metadataBase,
+    title: metadata.title,
+    description: metadata.description,
+    alternates: {
+      canonical: path,
+      languages: getPreconstructionProjectLanguageAlternates(projectSlug),
     },
     openGraph: {
       title: metadata.title,

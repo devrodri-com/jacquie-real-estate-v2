@@ -226,6 +226,74 @@
       "body": "Podemos revisar proyectos, zonas y datos actuales sin apurar la decisión ni depender de promesas exageradas.",
       "button": "Hablar con Jacquie"
     },
+    "detail": {
+      "backToPreconstruction": "Volver a preconstrucción",
+      "labels": {
+        "area": "Zona",
+        "city": "Ciudad",
+        "address": "Dirección",
+        "buildingType": "Tipo de proyecto",
+        "designTeam": "Diseño / arquitectura",
+        "priceFrom": "Desde",
+        "delivery": "Entrega",
+        "status": "Estado"
+      },
+      "statusBadge": "Información a confirmar",
+      "priceQualifier": "sujeto a confirmación actual",
+      "deliveryQualifier": "sujeta a confirmación actual",
+      "summary": {
+        "eyebrow": "Lectura del proyecto",
+        "headline": "Una opción para revisar con contexto",
+        "body": "Un proyecto para evaluar con una mirada clara sobre zona, precio inicial y etapa actual. La prioridad es confirmar datos vigentes y entender si encaja con tu situación."
+      },
+      "summaries": {
+        "2200-brickell": "Un proyecto residencial en Brickell para revisar con una mirada clara sobre zona, precio inicial y etapa del proyecto. No se presenta como recomendación cerrada: la idea es confirmar datos actuales y entender si encaja con tu situación.",
+        "elle-residences": "Un proyecto en Edgewater que puede servir como referencia para evaluar opciones nuevas en Miami con criterio. Antes de avanzar, conviene revisar disponibilidad, precio vigente y condiciones actuales.",
+        "midtown-park": "Una opción en Midtown para mirar con contexto de zona y etapa del proyecto. El objetivo es ordenar información inicial antes de decidir si vale la pena profundizar."
+      },
+      "details": {
+        "eyebrow": "Datos principales",
+        "headline": "Datos iniciales del proyecto"
+      },
+      "sections": {
+        "highlights": "Características relevantes",
+        "residences": "Residencias",
+        "unitMix": "Tipologías",
+        "amenities": "Amenidades y estilo de vida",
+        "paymentPlan": "Plan de pago",
+        "location": "Ubicación"
+      },
+      "paymentPlanNote": "El plan de pago debe confirmarse con información oficial actualizada.",
+      "locationBody": "Referencia de ubicación del proyecto. Antes de avanzar, conviene revisar contexto de zona, acceso y datos oficiales actualizados.",
+      "mapTitle": "Mapa de",
+      "review": {
+        "eyebrow": "Antes de avanzar",
+        "headline": "Qué conviene revisar",
+        "items": [
+          "Disponibilidad actual del proyecto.",
+          "Precio vigente y condiciones actuales.",
+          "Entrega estimada y estado comercial.",
+          "Documentos oficiales y material actualizado."
+        ]
+      },
+      "verification": {
+        "headline": "Información inicial",
+        "body": "Los datos de este proyecto pueden actualizarse. Si querés avanzar, reviso contigo precio, disponibilidad, entrega y condiciones actuales antes de tomar una decisión."
+      },
+      "gallery": {
+        "open": "Abrir imagen de",
+        "close": "Cerrar",
+        "previous": "Imagen anterior",
+        "next": "Imagen siguiente",
+        "photos": "fotos"
+      },
+      "cta": {
+        "headline": "¿Querés revisar este proyecto con más contexto?",
+        "body": "Escribime y podemos confirmar datos actuales antes de avanzar.",
+        "button": "Consultar por este proyecto"
+      },
+      "imageAltPrefix": "Imagen del proyecto"
+    },
     "imageAltPrefix": "Imagen del proyecto"
   },
   "listings": {
