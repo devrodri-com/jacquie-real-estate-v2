@@ -205,6 +205,29 @@
       "secondaryCta": "Contact"
     }
   },
+  "preConstruction": {
+    "hero": {
+      "eyebrow": "Pre-construction",
+      "title": "Pre-construction projects",
+      "intro": "An initial selection of projects to evaluate with clarity, without rushed decisions or exaggerated promises."
+    },
+    "labels": {
+      "priceFrom": "From",
+      "delivery": "Delivery",
+      "statusBadge": "Information to confirm"
+    },
+    "projectCta": "Ask about this project",
+    "note": {
+      "headline": "Information to confirm",
+      "body": "Project information must be confirmed before making a decision. I can help you review which option makes sense for your situation."
+    },
+    "finalCta": {
+      "headline": "Want to evaluate a pre-construction opportunity?",
+      "body": "We can review projects, areas, and current information without rushing the decision or relying on exaggerated promises.",
+      "button": "Talk to Jacquie"
+    },
+    "imageAltPrefix": "Project image for"
+  },
   "contact": {
     "hero": {
       "eyebrow": "Contact",

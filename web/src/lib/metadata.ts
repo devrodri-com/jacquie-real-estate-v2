@@ -3,7 +3,12 @@ import { routing, type RouteLocale } from "@/i18n/routing";
 
 export const metadataBase = new URL("https://jacquie-real-estate-v2.vercel.app");
 
-type MetadataPage = "home" | "propertyManagement" | "about" | "contact";
+type MetadataPage =
+  | "home"
+  | "propertyManagement"
+  | "about"
+  | "contact"
+  | "preConstruction";
 
 type LocalizedMetadata = {
   description: string;
@@ -15,6 +20,7 @@ const pageSlugs: Record<MetadataPage, string> = {
   propertyManagement: "property-management",
   about: "about",
   contact: "contact",
+  preConstruction: "pre-construction",
 };
 
 const localeMetadata: Record<RouteLocale, Record<MetadataPage, LocalizedMetadata>> = {
@@ -39,6 +45,11 @@ const localeMetadata: Record<RouteLocale, Record<MetadataPage, LocalizedMetadata
       description:
         "Escribile a Jacquie por WhatsApp para conversar sobre tu propiedad, una inversión o tu próximo paso en Miami.",
     },
+    preConstruction: {
+      title: "Proyectos en preconstrucción | Jacquie Zarate",
+      description:
+        "Evaluá proyectos en preconstrucción en Miami con acompañamiento personalizado y criterio, sin promesas exageradas.",
+    },
   },
   en: {
     home: {
@@ -61,6 +72,11 @@ const localeMetadata: Record<RouteLocale, Record<MetadataPage, LocalizedMetadata
       description:
         "Write to Jacquie on WhatsApp to talk about your property, an investment, or your next step in Miami.",
     },
+    preConstruction: {
+      title: "Pre-construction projects | Jacquie Zarate",
+      description:
+        "Evaluate pre-construction projects in Miami with personalized guidance and clear criteria, without exaggerated promises.",
+    },
   },
   "fr-ca": {
     home: {
@@ -82,6 +98,11 @@ const localeMetadata: Record<RouteLocale, Record<MetadataPage, LocalizedMetadata
       title: "Contact | Jacquie Zarate",
       description:
         "Envoyez une demande à Jacquie sur WhatsApp pour parler de votre propriété, d’un investissement ou de votre prochaine étape à Miami.",
+    },
+    preConstruction: {
+      title: "Projets en préconstruction | Jacquie Zarate",
+      description:
+        "Évaluez des projets en préconstruction à Miami avec un accompagnement personnalisé et des critères clairs, sans promesses exagérées.",
     },
   },
 };

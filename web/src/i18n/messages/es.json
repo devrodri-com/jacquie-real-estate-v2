@@ -205,6 +205,29 @@
       "secondaryCta": "Contacto"
     }
   },
+  "preConstruction": {
+    "hero": {
+      "eyebrow": "Preconstrucción",
+      "title": "Proyectos en preconstrucción",
+      "intro": "Una selección inicial de proyectos para evaluar con criterio, sin promesas ni decisiones apuradas."
+    },
+    "labels": {
+      "priceFrom": "Desde",
+      "delivery": "Entrega",
+      "statusBadge": "Información a confirmar"
+    },
+    "projectCta": "Consultar por este proyecto",
+    "note": {
+      "headline": "Información a confirmar",
+      "body": "La información de cada proyecto debe confirmarse antes de tomar una decisión. Te ayudo a revisar qué opción tiene sentido para tu situación."
+    },
+    "finalCta": {
+      "headline": "¿Querés evaluar una oportunidad de preconstrucción?",
+      "body": "Podemos revisar proyectos, zonas y datos actuales sin apurar la decisión ni depender de promesas exageradas.",
+      "button": "Hablar con Jacquie"
+    },
+    "imageAltPrefix": "Imagen del proyecto"
+  },
   "contact": {
     "hero": {
       "eyebrow": "Contacto",

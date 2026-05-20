@@ -19,6 +19,7 @@ const footerContent: Record<
     contactTitle: string;
     links: {
       propertyManagement: string;
+      preConstruction: string;
       about: string;
       contact: string;
     };
@@ -37,6 +38,7 @@ const footerContent: Record<
     contactTitle: "Contacto",
     links: {
       propertyManagement: "Gestión de propiedades",
+      preConstruction: "Preconstrucción",
       about: "Sobre Jacquie",
       contact: "Contacto",
     },
@@ -53,6 +55,7 @@ const footerContent: Record<
     contactTitle: "Contact",
     links: {
       propertyManagement: "Property Management",
+      preConstruction: "Pre-construction",
       about: "About",
       contact: "Contact",
     },
@@ -69,6 +72,7 @@ const footerContent: Record<
     contactTitle: "Contact",
     links: {
       propertyManagement: "Gestion de propriétés",
+      preConstruction: "Préconstruction",
       about: "À propos",
       contact: "Contact",
     },
@@ -101,6 +105,10 @@ export function SiteFooter() {
     {
       href: `/${locale}/property-management`,
       label: content.links.propertyManagement,
+    },
+    {
+      href: `/${locale}/pre-construction`,
+      label: content.links.preConstruction,
     },
     {
       href: `/${locale}/about`,
