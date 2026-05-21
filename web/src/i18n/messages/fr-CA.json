@@ -210,14 +210,41 @@
     "hero": {
       "eyebrow": "Préconstruction",
       "title": "Projets en préconstruction",
-      "intro": "Une première sélection de projets à évaluer avec clarté, sans décisions précipitées ni promesses exagérées."
+      "intro": "Un catalogue sélectionné de projets à évaluer avec clarté, sans décisions précipitées ni promesses exagérées."
     },
     "labels": {
       "priceFrom": "À partir de",
       "delivery": "Livraison",
       "statusBadge": "Information à confirmer"
     },
-    "projectCta": "Demander de l’information sur ce projet",
+    "filters": {
+      "search": "Rechercher",
+      "searchPlaceholder": "Nom, secteur ou ville",
+      "zone": "Secteur",
+      "allAreas": "Tous",
+      "rentalPolicy": "Politique de location",
+      "rentalPolicyNote": "Les politiques de location doivent être confirmées avec des informations officielles à jour.",
+      "sort": "Ordre",
+      "reset": "Réinitialiser",
+      "projectsLabel": "projets",
+      "noResults": "Aucun projet ne correspond à ces filtres.",
+      "sortOptions": {
+        "az": "A-Z",
+        "za": "Z-A",
+        "priceAsc": "Prix croissant",
+        "priceDesc": "Prix décroissant"
+      },
+      "rentalPolicyOptions": {
+        "noRestrictions": "Sans restrictions",
+        "shortTerm": "Location courte durée",
+        "thirtyDays": "30 jours",
+        "sixtyDays": "60 jours",
+        "ninetyDays": "90 jours",
+        "sixMonths": "6 mois",
+        "toConfirm": "À confirmer"
+      }
+    },
+    "projectCta": "Voir le projet",
     "note": {
       "headline": "Information à confirmer",
       "body": "Les informations de chaque projet doivent être confirmées avant toute décision. Je peux vous aider à évaluer quelle option correspond à votre situation."

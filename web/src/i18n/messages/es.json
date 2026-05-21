@@ -209,14 +209,41 @@
     "hero": {
       "eyebrow": "Preconstrucción",
       "title": "Proyectos en preconstrucción",
-      "intro": "Una selección inicial de proyectos para evaluar con criterio, sin promesas ni decisiones apuradas."
+      "intro": "Un catálogo curado de proyectos para evaluar con criterio, sin promesas ni decisiones apuradas."
     },
     "labels": {
       "priceFrom": "Desde",
       "delivery": "Entrega",
       "statusBadge": "Información a confirmar"
     },
-    "projectCta": "Consultar por este proyecto",
+    "filters": {
+      "search": "Buscar",
+      "searchPlaceholder": "Nombre, zona o ciudad",
+      "zone": "Zona",
+      "allAreas": "Todas",
+      "rentalPolicy": "Política de renta",
+      "rentalPolicyNote": "Las políticas de renta deben confirmarse con información oficial actualizada.",
+      "sort": "Orden",
+      "reset": "Limpiar",
+      "projectsLabel": "proyectos",
+      "noResults": "No hay proyectos que coincidan con esos filtros.",
+      "sortOptions": {
+        "az": "A-Z",
+        "za": "Z-A",
+        "priceAsc": "Precio menor a mayor",
+        "priceDesc": "Precio mayor a menor"
+      },
+      "rentalPolicyOptions": {
+        "noRestrictions": "Sin restricciones",
+        "shortTerm": "Renta corta",
+        "thirtyDays": "30 días",
+        "sixtyDays": "60 días",
+        "ninetyDays": "90 días",
+        "sixMonths": "6 meses",
+        "toConfirm": "Por confirmar"
+      }
+    },
+    "projectCta": "Ver proyecto",
     "note": {
       "headline": "Información a confirmar",
       "body": "La información de cada proyecto debe confirmarse antes de tomar una decisión. Te ayudo a revisar qué opción tiene sentido para tu situación."

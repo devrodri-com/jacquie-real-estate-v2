@@ -1,11 +1,15 @@
 import { normalizedPreconstructionProjectsFromRaw } from "./normalize";
 import type {
   PreconstructionProject,
+  PublicPreconstructionProject,
   VisiblePreconstructionProject,
   VisibilityStatus,
 } from "./types";
 
-const curatedPreconstructionProjects: PreconstructionProject[] = [
+type CuratedPreconstructionProject = Partial<PreconstructionProject> &
+  Pick<PreconstructionProject, "heroImage" | "id" | "name" | "slug">;
+
+const curatedPreconstructionProjects: CuratedPreconstructionProject[] = [
   {
     id: "2200-brickell",
     name: "2200 Brickell Residences",
@@ -482,14 +486,48 @@ function hasDetailSlug(
   );
 }
 
+function isPublicCatalogProject(
+  project: PreconstructionProject,
+): project is PublicPreconstructionProject {
+  return (
+    project.isPublicCatalogCandidate &&
+    project.detailReady &&
+    Boolean(project.detailSlug)
+  );
+}
+
 const curatedPreconstructionProjectById = new Map(
   curatedPreconstructionProjects.map((project) => [project.id, project]),
 );
 
 export const preconstructionProjects: PreconstructionProject[] =
-  normalizedPreconstructionProjectsFromRaw.map(
-    (project) => curatedPreconstructionProjectById.get(project.id) ?? project,
-  );
+  normalizedPreconstructionProjectsFromRaw.map((project) => {
+    const curatedProject = curatedPreconstructionProjectById.get(project.id);
+
+    if (!curatedProject) {
+      return project;
+    }
+
+    return {
+      ...project,
+      ...curatedProject,
+      detailReady: project.detailReady,
+      detailSlug: curatedProject.detailSlug ?? project.detailSlug,
+      exclusionReason: project.exclusionReason,
+      isPublicCatalogCandidate: project.isPublicCatalogCandidate,
+      rentalPolicyCategory: project.rentalPolicyCategory,
+      riskFlags: Array.from(
+        new Set([...project.riskFlags, ...(curatedProject.riskFlags ?? [])]),
+      ),
+      sortDelivery: curatedProject.sortDelivery ?? project.sortDelivery,
+      sortPrice: curatedProject.sortPrice ?? project.sortPrice,
+      visibilityStatus: project.visibilityStatus,
+    };
+  });
+
+export function getPublicCatalogPreconstructionProjects(): PublicPreconstructionProject[] {
+  return preconstructionProjects.filter(isPublicCatalogProject);
+}
 
 export function getVisiblePreconstructionProjects(): VisiblePreconstructionProject[] {
   return preconstructionProjects.filter(hasDetailSlug);
@@ -512,7 +550,7 @@ export function getPreconstructionProjectsByVisibility(
 }
 
 export function getVisiblePreconstructionDetailSlugs(): string[] {
-  return getVisiblePreconstructionProjects().map(
+  return getPublicCatalogPreconstructionProjects().map(
     (project) => project.detailSlug,
   );
 }
@@ -520,7 +558,7 @@ export function getVisiblePreconstructionDetailSlugs(): string[] {
 export function getPreconstructionProjectBySlug(
   detailSlug: string,
 ): PreconstructionProject | undefined {
-  return getVisiblePreconstructionProjects().find(
+  return getPublicCatalogPreconstructionProjects().find(
     (project) => project.detailSlug === detailSlug,
   );
 }

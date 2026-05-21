@@ -22,6 +22,15 @@ export type VisibilityStatus =
   | "discard"
   | "hidden/legal_review";
 
+export type RentalPolicyCategory =
+  | "no_restrictions"
+  | "short_term"
+  | "30_days"
+  | "60_days"
+  | "90_days"
+  | "6_months"
+  | "to_confirm";
+
 export type PreconstructionRiskFlag =
   | "roi_claim"
   | "profitability_claim"
@@ -57,12 +66,15 @@ export type PreconstructionProject = {
   searchableName: string;
   area: string;
   normalizedArea: string;
+  rentalPolicyCategory: RentalPolicyCategory;
   city?: string;
   address?: string;
   mapQuery?: string;
   priceFromUsd?: number;
+  sortPrice?: number;
   priceStatus: VerificationStatus;
   delivery?: string;
+  sortDelivery?: number;
   deliveryStatus: VerificationStatus;
   buildingType?: LocalizedPreconstructionText;
   designTeam?: string;
@@ -77,7 +89,9 @@ export type PreconstructionProject = {
   galleryImages?: string[];
   riskFlags: PreconstructionRiskFlag[];
   visibilityStatus: VisibilityStatus;
+  isPublicCatalogCandidate: boolean;
   detailReady: boolean;
+  exclusionReason?: string;
   source: "internal-curation" | "raw-import";
   status: "needs_verification";
 };
@@ -85,5 +99,11 @@ export type PreconstructionProject = {
 export type VisiblePreconstructionProject = PreconstructionProject & {
   detailSlug: string;
   visibilityStatus: "visible";
+  detailReady: true;
+};
+
+export type PublicPreconstructionProject = PreconstructionProject & {
+  detailSlug: string;
+  isPublicCatalogCandidate: true;
   detailReady: true;
 };

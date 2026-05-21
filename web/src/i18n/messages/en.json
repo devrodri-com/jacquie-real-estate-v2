@@ -209,14 +209,41 @@
     "hero": {
       "eyebrow": "Pre-construction",
       "title": "Pre-construction projects",
-      "intro": "An initial selection of projects to evaluate with clarity, without rushed decisions or exaggerated promises."
+      "intro": "A curated catalog of projects to evaluate with clarity, without rushed decisions or exaggerated promises."
     },
     "labels": {
       "priceFrom": "From",
       "delivery": "Delivery",
       "statusBadge": "Information to confirm"
     },
-    "projectCta": "Ask about this project",
+    "filters": {
+      "search": "Search",
+      "searchPlaceholder": "Name, area, or city",
+      "zone": "Area",
+      "allAreas": "All",
+      "rentalPolicy": "Rental policy",
+      "rentalPolicyNote": "Rental policies must be confirmed with current official information.",
+      "sort": "Sort",
+      "reset": "Reset",
+      "projectsLabel": "projects",
+      "noResults": "No projects match those filters.",
+      "sortOptions": {
+        "az": "A-Z",
+        "za": "Z-A",
+        "priceAsc": "Price low to high",
+        "priceDesc": "Price high to low"
+      },
+      "rentalPolicyOptions": {
+        "noRestrictions": "No restrictions",
+        "shortTerm": "Short-term rental",
+        "thirtyDays": "30 days",
+        "sixtyDays": "60 days",
+        "ninetyDays": "90 days",
+        "sixMonths": "6 months",
+        "toConfirm": "To confirm"
+      }
+    },
+    "projectCta": "View project",
     "note": {
       "headline": "Information to confirm",
       "body": "Project information must be confirmed before making a decision. I can help you review which option makes sense for your situation."

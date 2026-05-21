@@ -79,9 +79,9 @@ function getWhatsAppMessage(
   }
 
   const projectMessages: Record<WhatsAppLocale, string> = {
-    es: `Hola Jacquie, quiero consultar por un proyecto de preconstrucción en Miami: ${projectName}.`,
-    en: `Hi Jacquie, I’d like to ask about the pre-construction project ${projectName} in Miami.`,
-    "fr-ca": `Bonjour Jacquie, j’aimerais demander de l’information sur le projet en préconstruction ${projectName} à Miami.`,
+    es: `Hola Jacquie, quiero consultar por ${projectName}.`,
+    en: `Hi Jacquie, I’d like to ask about ${projectName}.`,
+    "fr-ca": `Bonjour Jacquie, j’aimerais demander de l’information sur ${projectName}.`,
   };
 
   return projectMessages[locale];

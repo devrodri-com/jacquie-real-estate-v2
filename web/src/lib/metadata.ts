@@ -387,7 +387,15 @@ export function buildPreconstructionProjectMetadata(
   locale: RouteLocale,
   project: PreconstructionProject,
 ): Metadata {
-  const metadata = preconstructionProjectMetadataByLocale[locale][project.id];
+  const metadata = preconstructionProjectMetadataByLocale[locale][project.id] ?? {
+    title: `${project.name} | Jacquie Zarate`,
+    description:
+      locale === "es"
+        ? `Evaluá ${project.name} en ${project.area} con una mirada clara y acompañamiento personalizado, sin promesas exageradas.`
+        : locale === "en"
+          ? `Review ${project.name} in ${project.area} with clear guidance and personalized support, without exaggerated promises.`
+          : `Évaluez ${project.name} à ${project.area} avec un accompagnement clair et personnalisé, sans promesses exagérées.`,
+  };
   const projectSlug = project.detailSlug ?? project.slug;
   const path = getPreconstructionProjectPath(locale, projectSlug);
   const image = {
