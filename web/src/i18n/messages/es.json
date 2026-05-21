@@ -265,7 +265,7 @@
         "delivery": "Entrega",
         "status": "Estado"
       },
-      "statusBadge": "Información a confirmar",
+      "statusBadge": "Datos del proyecto",
       "priceQualifier": "sujeto a confirmación actual",
       "deliveryQualifier": "sujeta a confirmación actual",
       "summary": {
@@ -307,7 +307,7 @@
       },
       "verification": {
         "headline": "Información inicial",
-        "body": "Los datos de este proyecto pueden actualizarse. Si querés avanzar, reviso contigo precio, disponibilidad, entrega y condiciones actuales antes de tomar una decisión."
+        "body": "La información del proyecto puede actualizarse. Antes de avanzar, revisamos disponibilidad, precios, entrega y condiciones con material oficial vigente."
       },
       "gallery": {
         "open": "Abrir imagen de",

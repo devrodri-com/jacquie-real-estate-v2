@@ -88,7 +88,7 @@ function getLocalizedList(
   list: LocalizedPreconstructionList | undefined,
   locale: WhatsAppLocale,
 ): string[] {
-  return list?.[locale] ?? [];
+  return Array.from(new Set(list?.[locale] ?? []));
 }
 
 function getDetailRows(
@@ -116,7 +116,6 @@ function getDetailRows(
         ? `${project.delivery} · ${content.deliveryQualifier}`
         : undefined,
     ],
-    [content.labels.status, content.statusBadge],
   ];
 
   return rows.filter((row): row is [string, string] => Boolean(row[1]));
@@ -139,8 +138,11 @@ function ProjectBulletSection({
         {title}
       </h3>
       <ul className="mt-6 grid gap-3 text-base leading-7 text-foreground/72">
-        {items.map((item) => (
-          <li className="border-t border-primary/10 pt-3" key={item}>
+        {items.map((item, index) => (
+          <li
+            className="border-t border-primary/10 pt-3"
+            key={`${title}-${index}-${item}`}
+          >
             {item}
           </li>
         ))}
@@ -195,10 +197,6 @@ export function PreconstructionDetailPage({
           <h1 className="mt-5 break-words font-display text-4xl leading-[0.98] text-primary sm:text-5xl lg:text-5xl">
             {project.name}
           </h1>
-
-          <div className="mt-7 inline-flex border border-primary/12 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-primary/66">
-            {content.statusBadge}
-          </div>
 
           <div className="mt-8 border-y border-primary/10 py-6">
             {project.priceFromUsd ? (
@@ -324,7 +322,10 @@ export function PreconstructionDetailPage({
           <div>
             <ol className="grid gap-3 text-base leading-7 text-foreground/72">
               {paymentPlan.map((item, index) => (
-                <li className="grid grid-cols-[2.5rem_1fr] gap-3" key={item}>
+                <li
+                  className="grid grid-cols-[2.5rem_1fr] gap-3"
+                  key={`${index}-${item}`}
+                >
                   <span className="text-sm font-semibold text-primary/45">
                     {String(index + 1).padStart(2, "0")}
                   </span>

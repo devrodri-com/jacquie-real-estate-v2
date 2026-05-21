@@ -355,6 +355,27 @@ function getSafeList(items: string[] | undefined, limit: number) {
     .slice(0, limit);
 }
 
+function sanitizePaymentPlanItem(item: string) {
+  return item
+    .replace(
+      /\s*\([^)]*(?:completa|to complete)\s*\d+(?:[.,]\d+)?\s*%[^)]*\)/gi,
+      "",
+    )
+    .replace(
+      /\s*\([^)]*(?:se imputa dentro del|credited within)[^)]*\)/gi,
+      "",
+    )
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function getPaymentPlanList(items: string[] | undefined) {
+  return (items ?? [])
+    .map((item) => sanitizePaymentPlanItem(item.trim()))
+    .filter((item) => item.length > 0)
+    .slice(0, 8);
+}
+
 function normalizeRawUnitItem(item: unknown): string | null {
   if (typeof item === "string") {
     return item;
@@ -403,8 +424,8 @@ function getUnitMix(project: RawPreconstructionProject): LocalizedPreconstructio
 }
 
 function getPaymentPlan(project: RawPreconstructionProject): LocalizedPreconstructionList | undefined {
-  const es = getSafeList(project.paymentPlan?.paymentPlanEs, 6);
-  const en = getSafeList(project.paymentPlan?.paymentPlanEn, 6);
+  const es = getPaymentPlanList(project.paymentPlan?.paymentPlanEs);
+  const en = getPaymentPlanList(project.paymentPlan?.paymentPlanEn);
 
   if (!es.length && !en.length) {
     return undefined;

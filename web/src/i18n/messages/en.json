@@ -265,7 +265,7 @@
         "delivery": "Delivery",
         "status": "Status"
       },
-      "statusBadge": "Information to confirm",
+      "statusBadge": "Project information",
       "priceQualifier": "subject to current confirmation",
       "deliveryQualifier": "subject to current confirmation",
       "summary": {
@@ -307,7 +307,7 @@
       },
       "verification": {
         "headline": "Initial information",
-        "body": "Project information may change. If you want to move forward, I can review current pricing, availability, delivery, and conditions with you before making a decision."
+        "body": "Project information may change. Before moving forward, I can review current availability, pricing, delivery, and conditions using updated official material."
       },
       "gallery": {
         "open": "Open image for",

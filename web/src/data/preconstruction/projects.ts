@@ -1,5 +1,6 @@
 import { normalizedPreconstructionProjectsFromRaw } from "./normalize";
 import type {
+  LocalizedPreconstructionList,
   PreconstructionProject,
   PublicPreconstructionProject,
   VisiblePreconstructionProject,
@@ -496,6 +497,240 @@ function isPublicCatalogProject(
   );
 }
 
+function getPaymentPercentTotal(items: string[]) {
+  let total = 0;
+  let percentCount = 0;
+  let hasBalanceWithoutPercent = false;
+
+  for (const item of items) {
+    const matches = [...item.matchAll(/(\d+(?:[.,]\d+)?)\s*%/g)];
+
+    if (matches.length > 0) {
+      for (const match of matches) {
+        total += Number(match[1].replace(",", "."));
+        percentCount += 1;
+      }
+
+      continue;
+    }
+
+    const normalizedItem = item
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+
+    if (
+      normalizedItem.includes("balance") ||
+      normalizedItem.includes("saldo") ||
+      normalizedItem.includes("solde")
+    ) {
+      hasBalanceWithoutPercent = true;
+    }
+  }
+
+  return {
+    hasBalanceWithoutPercent,
+    percentCount,
+    total,
+  };
+}
+
+function sanitizePaymentPlanItem(item: string) {
+  return item
+    .replace(
+      /\s*\([^)]*(?:financiaci[oó]n|financing|foreign buyers?|foreigners|extranjeros)[^)]*\)/gi,
+      "",
+    )
+    .replace(
+      /\s*\([^)]*(?:completa|to complete)\s*\d+(?:[.,]\d+)?\s*%[^)]*\)/gi,
+      "",
+    )
+    .replace(
+      /\s*\([^)]*(?:se imputa dentro del|credited within)[^)]*\)/gi,
+      "",
+    )
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function addFinancingAtClosingNote(
+  item: string,
+  locale: "en" | "es" | "fr-ca",
+) {
+  const normalizedItem = item
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+  const hasClosing =
+    normalizedItem.includes("cierre") ||
+    normalizedItem.includes("closing") ||
+    normalizedItem.includes("cloture");
+  const hasFinancing =
+    normalizedItem.includes("financiacion") ||
+    normalizedItem.includes("financing") ||
+    normalizedItem.includes("financement");
+
+  if (!hasClosing || hasFinancing) {
+    return item;
+  }
+
+  if (locale === "fr-ca") {
+    return `${item}. Financement disponible à la clôture, sous réserve d’approbation.`;
+  }
+
+  if (locale === "en") {
+    return `${item}. Financing available at closing, subject to approval.`;
+  }
+
+  return `${item}. Financiación disponible al cierre, sujeta a aprobación.`;
+}
+
+function completeBalanceLine(
+  item: string,
+  locale: "en" | "es" | "fr-ca",
+  remainingPercent: number,
+) {
+  const normalizedItem = item
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
+  if (locale === "fr-ca" || normalizedItem.includes("solde")) {
+    return `${remainingPercent} % à la clôture`;
+  }
+
+  if (locale === "en") {
+    return `${remainingPercent}% at closing`;
+  }
+
+  if (locale === "es" || normalizedItem.includes("saldo")) {
+    return `${remainingPercent}% al cierre`;
+  }
+
+  return item;
+}
+
+function getPaymentPercentTotalForItem(item: string) {
+  return [...item.matchAll(/(\d+(?:[.,]\d+)?)\s*%/g)].reduce(
+    (total, match) => total + Number(match[1].replace(",", ".")),
+    0,
+  );
+}
+
+function isAlternativePaymentPlan(items: string[]) {
+  if (items.length < 2) {
+    return false;
+  }
+
+  return items.every((item) => {
+    const normalizedItem = item
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+
+    return (
+      getPaymentPercentTotalForItem(item) === 100 &&
+      (normalizedItem.includes("fase") ||
+        normalizedItem.includes("phase") ||
+        normalizedItem.includes("financiado") ||
+        normalizedItem.includes("financed") ||
+        normalizedItem.includes("contado") ||
+        normalizedItem.includes("cash"))
+    );
+  });
+}
+
+function getFallbackPaymentPlanItems(locale: "en" | "es" | "fr-ca") {
+  if (locale === "fr-ca") {
+    return [
+      "Structure de paiement spécifique à confirmer.",
+      "Financement disponible à la clôture, sous réserve d’approbation.",
+    ];
+  }
+
+  if (locale === "en") {
+    return [
+      "Specific payment structure to confirm.",
+      "Financing available at closing, subject to approval.",
+    ];
+  }
+
+  return [
+    "Estructura específica de pago a confirmar.",
+    "Financiación disponible al cierre, sujeta a aprobación.",
+  ];
+}
+
+function getFallbackPaymentPlan(): LocalizedPreconstructionList {
+  return {
+    es: getFallbackPaymentPlanItems("es"),
+    en: getFallbackPaymentPlanItems("en"),
+    "fr-ca": getFallbackPaymentPlanItems("fr-ca"),
+  };
+}
+
+function getSafePaymentPlanItems(
+  items: string[],
+  locale: "en" | "es" | "fr-ca",
+) {
+  const sanitizedItems = items.map(sanitizePaymentPlanItem).filter(Boolean);
+
+  const { hasBalanceWithoutPercent, percentCount, total } =
+    getPaymentPercentTotal(sanitizedItems);
+
+  if (percentCount === 0) {
+    return getFallbackPaymentPlanItems(locale);
+  }
+
+  if (isAlternativePaymentPlan(sanitizedItems)) {
+    return getFallbackPaymentPlanItems(locale);
+  }
+
+  if (Math.abs(total - 100) < 0.5) {
+    return sanitizedItems.map((item) => addFinancingAtClosingNote(item, locale));
+  }
+
+  if (total > 0 && total < 100 && hasBalanceWithoutPercent) {
+    const remainingPercent = Math.round(100 - total);
+
+    const completedItems = sanitizedItems.map((item) => {
+      if (/%/.test(item)) {
+        return item;
+      }
+
+      return completeBalanceLine(item, locale, remainingPercent);
+    });
+
+    return completedItems.map((item) =>
+      addFinancingAtClosingNote(item, locale),
+    );
+  }
+
+  return getFallbackPaymentPlanItems(locale);
+}
+
+function getSafePaymentPlan(
+  paymentPlan: LocalizedPreconstructionList | undefined,
+) {
+  if (!paymentPlan) {
+    return undefined;
+  }
+
+  const es = getSafePaymentPlanItems(paymentPlan.es, "es");
+  const en = getSafePaymentPlanItems(paymentPlan.en, "en");
+  const frCa = getSafePaymentPlanItems(paymentPlan["fr-ca"], "fr-ca");
+
+  if (!es && !en && !frCa) {
+    return undefined;
+  }
+
+  return {
+    es: es ?? [],
+    en: en ?? [],
+    "fr-ca": frCa ?? [],
+  };
+}
+
 const curatedPreconstructionProjectById = new Map(
   curatedPreconstructionProjects.map((project) => [project.id, project]),
 );
@@ -505,7 +740,10 @@ export const preconstructionProjects: PreconstructionProject[] =
     const curatedProject = curatedPreconstructionProjectById.get(project.id);
 
     if (!curatedProject) {
-      return project;
+      return {
+        ...project,
+        paymentPlan: getSafePaymentPlan(project.paymentPlan),
+      };
     }
 
     return {
@@ -523,7 +761,12 @@ export const preconstructionProjects: PreconstructionProject[] =
       sortPrice: curatedProject.sortPrice ?? project.sortPrice,
       visibilityStatus: project.visibilityStatus,
     };
-  });
+  }).map((project) => ({
+    ...project,
+    paymentPlan:
+      getSafePaymentPlan(project.paymentPlan) ??
+      (project.isPublicCatalogCandidate ? getFallbackPaymentPlan() : undefined),
+  }));
 
 export function getPublicCatalogPreconstructionProjects(): PublicPreconstructionProject[] {
   return preconstructionProjects.filter(isPublicCatalogProject);
