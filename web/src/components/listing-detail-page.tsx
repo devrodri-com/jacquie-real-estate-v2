@@ -133,7 +133,7 @@ export function ListingDetailPage({
   return (
     <article className="pb-14 pt-10 sm:pb-24 sm:pt-16 lg:pt-20">
       <Link
-        className="text-sm font-semibold text-primary/68 underline decoration-primary/20 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary/50"
+        className="inline-flex items-center justify-center border border-primary/12 bg-white/55 px-4 py-2.5 text-sm font-semibold text-primary shadow-[0_10px_28px_rgba(59,39,74,0.04)] transition-colors hover:border-primary/35 hover:bg-white"
         href={`/${locale}/listings`}
       >
         {content.backToListings}
