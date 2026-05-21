@@ -26,7 +26,6 @@ type PreconstructionPageContent = {
   filters: {
     allAreas: string;
     noResults: string;
-    projectsLabel: string;
     rentalPolicy: string;
     rentalPolicyNote: string;
     reset: string;
@@ -420,11 +419,8 @@ export function PreconstructionPage({
           </button>
         </div>
 
-        <div className="mt-4 flex flex-col gap-2 text-sm leading-6 text-foreground/58 sm:flex-row sm:items-start sm:justify-between">
+        <div className="mt-4 text-sm leading-6 text-foreground/58">
           <p>{content.filters.rentalPolicyNote}</p>
-          <p className="font-semibold text-primary/62">
-            {filteredProjects.length} {content.filters.projectsLabel}
-          </p>
         </div>
       </section>
 

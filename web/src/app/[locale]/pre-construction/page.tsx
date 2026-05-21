@@ -53,7 +53,6 @@ export default async function PreconstructionRoute({
           rentalPolicyNote: t("filters.rentalPolicyNote"),
           sort: t("filters.sort"),
           reset: t("filters.reset"),
-          projectsLabel: t("filters.projectsLabel"),
           noResults: t("filters.noResults"),
           sortOptions: {
             az: t("filters.sortOptions.az"),
